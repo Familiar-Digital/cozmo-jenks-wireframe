@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cozmo Jenks — Website</title>
+<style>
+
+/* ─────────────────────────────────────────
+   RESET
+───────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; }
+
+/* ─────────────────────────────────────────
+   BASE
+───────────────────────────────────────── */
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #c8c8c8;
+  color: #111;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─────────────────────────────────────────
+   WIREFRAME CHROME
+───────────────────────────────────────── */
+.wf-bar {
+  background: #111;
+  color: #777;
+  font-family: monospace;
+  font-size: 11px;
+  padding: 7px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.wf-bar strong { color: #fff; }
+
+.sec-label {
+  background: #efefef;
+  border-top: 1px dashed #bbb;
+  border-bottom: 1px dashed #bbb;
+  padding: 4px 20px;
+  font-family: monospace;
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ─────────────────────────────────────────
+   PAGE — mobile default, max 480px
+───────────────────────────────────────── */
+.page {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #fff;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;
+}
+
+/* ─────────────────────────────────────────
+   ANNOTATION MARKERS
+───────────────────────────────────────── */
+.ann {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-left: 4px;
+  position: relative;
+  top: -1px;
+  flex-shrink: 0;
+}
+
+/* ─────────────────────────────────────────
+   SHARED TYPOGRAPHY
+───────────────────────────────────────── */
+.eyebrow {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #999;
+  display: block;
+  margin-bottom: 8px;
+}
+h2 {
+  font-size: 26px;
+  font-weight: normal;
+  line-height: 1.25;
+  color: #111;
+}
+.section-standfirst {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.75;
+  margin-top: 10px;
+}
+.body-copy {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.8;
+}
+.btn {
+  display: block;
+  text-align: center;
+  background: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 15px 24px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+.btn-outline {
+  display: block;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #555;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+/* ─────────────────────────────────────────
+   NAV
+───────────────────────────────────────── */
+.site-nav {
+  padding: 16px 20px;
+  border-bottom: 2px solid #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wordmark {
+  font-size: 19px;
+  font-style: italic;
+  font-weight: normal;
+}
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: #111;
+}
+.nav-cta-mobile {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #111;
+  color: #fff;
+  padding: 8px 14px;
+}
+.nav-desktop { display: none; }
+
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+.hero-photo {
+  background: #f2f2f2;
+  border-bottom: 1px solid #ddd;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.photo-box {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 4/5;
+  border: 1px dashed #bbb;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.photo-box svg { opacity: 0.2; }
+.photo-box p {
+  font-family: monospace;
+  font-size: 10px;
+  color: #bbb;
+  text-align: center;
+  line-height: 1.5;
+}
+.photo-note {
+  font-family: monospace;
+  font-size: 10px;
+  color: #bbb;
+  text-align: center;
+}
+
+.hero-text {
+  padding: 32px 24px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-bottom: 1px solid #eee;
+}
+.hero-text h1 {
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #111;
+}
+.hero-text .standfirst {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.75;
+}
+.hero-cta-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 4px;
+}
+.hero-stats {
+  display: flex;
+  gap: 0;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-right: 16px;
+  border-right: 1px solid #eee;
+  margin-right: 16px;
+}
+.stat:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+.stat-n {
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 1;
+  color: #111;
+}
+.stat-l {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #aaa;
+  line-height: 1.4;
+}
+
+/* ─────────────────────────────────────────
+   WHAT PEOPLE COME FOR
+───────────────────────────────────────── */
+.comes-for {
+  background: #111;
+  padding: 28px 24px;
+  border-bottom: 1px solid #ddd;
+}
+.comes-for p {
+  font-size: 17px;
+  font-style: italic;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.comes-for p strong {
+  font-style: normal;
+  color: #fff;
+}
+.comes-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.comes-tag {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 4px 12px;
+}
+
+/* ─────────────────────────────────────────
+   SERVICES
+───────────────────────────────────────── */
+.services-section {
+  padding: 40px 24px;
+  border-bottom: 1px solid #ddd;
+}
+.section-head { margin-bottom: 32px; }
+
+.service-item {
+  border-top: 1px solid #eee;
+  padding: 24px 0;
+}
+.service-item:last-child { border-bottom: 1px solid #eee; }
+.service-num-title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.s-num {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  color: #bbb;
+  flex-shrink: 0;
+}
+.service-item h3 {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #111;
+}
+.service-item p {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+.s-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.s-tag {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #888;
+  border: 1px solid #ddd;
+  padding: 3px 9px;
+}
+
+/* ─────────────────────────────────────────
+   HOW IT WORKS
+───────────────────────────────────────── */
+.how-section {
+  background: #f7f7f7;
+  padding: 40px 24px;
+  border-bottom: 1px solid #ddd;
+}
+.how-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 28px;
+}
+.how-step {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 24px 20px;
+}
+.step-n {
+  font-size: 32px;
+  font-weight: normal;
+  color: #e0e0e0;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.how-step h4 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #111;
+  margin-bottom: 8px;
+}
+.how-step p {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.75;
+}
+.how-footer {
+  margin-top: 20px;
+  padding: 16px 20px;
+  border-left: 3px solid #111;
+  background: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.7;
+}
+.how-cta { margin-top: 24px; }
+
+/* ─────────────────────────────────────────
+   ABOUT
+───────────────────────────────────────── */
+.about-section {
+  padding: 40px 24px;
+  border-bottom: 1px solid #ddd;
+}
+.about-photo-wrap {
+  background: #f2f2f2;
+  border: 1px solid #e0e0e0;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+.about-photo-inner {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 2/3;
+  border: 1px dashed #bbb;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.about-photo-inner svg { opacity: 0.2; }
+.about-photo-inner p {
+  font-family: monospace;
+  font-size: 10px;
+  color: #bbb;
+  text-align: center;
+  line-height: 1.5;
+}
+.about-text { display: flex; flex-direction: column; gap: 14px; }
+.about-lead {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1.55;
+  color: #111;
+}
+.credentials {
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cred {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #777;
+  display: flex;
+  gap: 10px;
+  line-height: 1.5;
+}
+.cred::before { content: '—'; color: #ccc; flex-shrink: 0; }
+
+/* ─────────────────────────────────────────
+   TESTIMONIALS
+───────────────────────────────────────── */
+.testi-section {
+  background: #f7f7f7;
+  padding: 40px 24px;
+  border-bottom: 1px solid #ddd;
+}
+.testi-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 28px;
+}
+.testi-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.testi-mark {
+  font-size: 40px;
+  color: #e0e0e0;
+  line-height: 0.8;
+  display: block;
+  margin-bottom: 4px;
+}
+.testi-text {
+  font-size: 15px;
+  font-style: italic;
+  color: #333;
+  line-height: 1.7;
+}
+.testi-footer {
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+}
+.testi-name {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #111;
+}
+.testi-context {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  color: #aaa;
+  margin-top: 2px;
+}
+.testi-placeholder {
+  border: 1px dashed #ccc;
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+.testi-placeholder p {
+  font-family: monospace;
+  font-size: 11px;
+  color: #bbb;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────
+   CONTACT
+───────────────────────────────────────── */
+.contact-section {
+  padding: 40px 24px 48px;
+  border-bottom: 1px solid #ddd;
+}
+.contact-intro { margin-bottom: 24px; }
+.contact-intro h2 { margin-bottom: 10px; }
+.free-call {
+  margin: 20px 0;
+  padding: 16px 18px;
+  border-left: 3px solid #111;
+  background: #f7f7f7;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+}
+.free-call strong { color: #111; font-weight: normal; }
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 28px;
+}
+.c-detail {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #666;
+  display: flex;
+  gap: 10px;
+  line-height: 1.5;
+}
+.c-detail::before { content: '—'; color: #ccc; flex-shrink: 0; }
+.c-detail em { font-style: normal; font-size: 11px; color: #bbb; }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field label {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #888;
+}
+.form-field input,
+.form-field textarea,
+.form-field select {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #111;
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 12px 14px;
+  border-radius: 0;
+  -webkit-appearance: none;
+  outline: none;
+  width: 100%;
+  resize: vertical;
+}
+.form-field textarea { min-height: 110px; }
+.form-submit {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 16px 24px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 4px;
+}
+.form-note {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #aaa;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
+.site-footer {
+  background: #111;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  text-align: center;
+}
+.footer-name {
+  font-size: 16px;
+  font-style: italic;
+  color: rgba(255,255,255,0.35);
+}
+.footer-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer-links a {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.3);
+}
+.footer-copy {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  color: rgba(255,255,255,0.2);
+}
+
+/* ─────────────────────────────────────────
+   ANNOTATIONS
+───────────────────────────────────────── */
+.annotations {
+  background: #111;
+  border-top: 3px solid #333;
+  padding: 32px 24px;
+}
+.annotations h4 {
+  font-family: monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+.ann-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.ann-item {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.65;
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #1e1e1e;
+}
+.ann-item:last-child { border-bottom: none; }
+.ann-item strong { color: #999; white-space: nowrap; flex-shrink: 0; min-width: 80px; }
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — desktop 680px+
+───────────────────────────────────────── */
+@media (min-width: 680px) {
+
+  .page { max-width: 960px; }
+
+  /* Nav */
+  .hamburger { display: none; }
+  .nav-cta-mobile { display: none; }
+  .nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .nav-desktop ul {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-desktop ul a {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #333;
+  }
+  .nav-desktop .nav-cta-desk {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: #111;
+    color: #fff;
+    padding: 9px 20px;
+  }
+
+  /* Hero: side by side */
+  .hero-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-photo {
+    border-bottom: none;
+    border-right: 1px solid #ddd;
+    min-height: 500px;
+    padding: 48px 40px;
+  }
+  .photo-box { max-width: 300px; }
+  .hero-text {
+    padding: 56px 48px;
+    border-bottom: none;
+    justify-content: center;
+  }
+  .hero-text h1 { font-size: 36px; }
+  .hero-cta-stack {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  .btn, .btn-outline { width: auto; display: inline-block; }
+  .btn { padding: 13px 32px; }
+
+  /* Comes-for strip */
+  .comes-for {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 32px 48px;
+  }
+  .comes-for p { margin-bottom: 0; flex-shrink: 0; max-width: 260px; font-size: 16px; }
+
+  /* Services */
+  .services-section { padding: 64px 48px; }
+  .section-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+    margin-bottom: 40px;
+  }
+  .section-head h2 { font-size: 32px; }
+
+  /* How it works: 3 columns */
+  .how-section { padding: 64px 48px; }
+  .how-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: unset;
+  }
+
+  /* About: side by side */
+  .about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+  .about-photo-wrap {
+    margin-bottom: 0;
+    border: none;
+    border-right: 1px solid #eee;
+    padding: 48px 40px;
+    min-height: 460px;
+  }
+  .about-text-col { padding: 64px 48px; }
+  .about-text-col .about-text { height: 100%; justify-content: center; display: flex; flex-direction: column; gap: 14px; }
+
+  /* Testimonials: 3 across */
+  .testi-section { padding: 64px 48px; }
+  .testi-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: unset;
+  }
+  .testi-placeholders {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 2px;
+  }
+
+  /* Contact: side by side */
+  .contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+  .contact-left {
+    padding: 64px 48px;
+    background: #f7f7f7;
+    border-right: 1px solid #eee;
+  }
+  .contact-right { padding: 64px 48px; }
+
+  /* Footer */
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 28px 48px;
+  }
+
+  /* Annotations */
+  .annotations { padding: 40px 48px; }
+  .ann-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 48px;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="page">
+<!-- ══════════ NAV ══════════ -->
+<nav class="site-nav">
+<div class="wordmark">Cozmo Jenks</div>
+<div class="hamburger"><span></span><span></span><span></span></div>
+<a class="nav-cta-mobile" href="#contact">Get in Touch</a>
+<div class="nav-desktop">
+<ul>
+<li><a href="#services">Healing</a></li>
+<li><a href="#teaching">Teaching</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#testimonials">Kind words</a></li>
+</ul>
+<a class="nav-cta-desk" href="#contact">Get in Touch </a>
+</div>
+</nav>
+<!-- ══════════ HERO ══════════ -->
+<div class="hero-wrap">
+<div class="hero-photo">
+<div class="photo-box">
+<svg fill="none" height="48" stroke="#aaa" stroke-width="1" viewbox="0 0 24 24" width="48">
+<circle cx="12" cy="8" r="4.5"></circle>
+<path d="M3 21c0-5 3.8-8 9-8s9 3 9 8"></path>
+</svg>
+<p>PORTRAIT PHOTO<br/>Cozmo at home<br/>Dorset · April 2026</p>
+</div>
+<p class="photo-note">Photoshoot confirmed — late April</p>
+</div>
+<div class="hero-text">
+<span class="eyebrow">Energy Healer &amp; IQM Teacher · Dorset, UK</span>
+<h1>Energy healing that genuinely works. </h1>
+<p class="standfirst">
+        Cozmo works with people, animals, and homes across the world. Her sessions are quiet, precise, and often life-changing — available remotely, wherever you are.
+      </p>
+<div class="hero-cta-stack">
+<a class="btn" href="#contact">Get in Touch</a>
+<a class="btn-outline" href="#how">How it works</a>
+</div>
+<div class="hero-stats">
+<div class="stat">
+<span class="stat-n">13+</span>
+<span class="stat-l">Years in practice</span>
+</div>
+<div class="stat">
+<span class="stat-n">1st</span>
+<span class="stat-l">IQM teacher in Europe</span>
+</div>
+<div class="stat">
+<span class="stat-n">Global</span>
+<span class="stat-l">Remote, worldwide</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ══════════ WHAT PEOPLE COME FOR ══════════ -->
+
+<!-- ══════════ SERVICES ══════════ -->
+<section class="services-section" id="services">
+<div class="section-head">
+<div>
+<span class="eyebrow">What Cozmo offers</span>
+<h2>Deep, effective work across a broad range of needs. </h2>
+</div>
+
+</div>
+<div class="service-item">
+<div class="service-num-title">
+<span class="s-num">01</span>
+<h3>Energy Clearing and Healing</h3>
+</div>
+<p>
+        Sessions are completely silent and non-invasive. You lie down, close your eyes, and rest. Cozmo works through a precise psychic connection — there is no need to explain yourself or talk through your history. She picks up what she needs.
+      </p>
+
+<div class="s-tags">
+<span class="s-tag">Trauma and grief</span>
+<span class="s-tag">Anxiety</span>
+<span class="s-tag">Feeling lost or blocked</span>
+<span class="s-tag">Remote worldwide</span>
+<span class="s-tag">In person in Dorset</span>
+</div>
+</div>
+<div class="service-item">
+<div class="service-num-title">
+<span class="s-num">02</span>
+<h3>Support Through Illness and Treatment</h3>
+</div>
+<p>
+        Cozmo works brilliantly alongside conventional medicine. If you or someone close to you is navigating surgery, chemotherapy, or a long recovery, her work can meaningfully support how the body and mind respond — often in ways that surprise people.
+      </p>
+<div class="s-tags">
+<span class="s-tag">Pre and post surgery</span>
+<span class="s-tag">Chemotherapy support</span>
+<span class="s-tag">Recovery</span>
+<span class="s-tag">Works with your medical team</span>
+</div>
+</div>
+<div class="service-item">
+<div class="service-num-title">
+<span class="s-num">03</span>
+<h3>Animals and Properties</h3>
+</div>
+<p>
+        Animals are among the most compelling evidence of what this work can do. They respond honestly — there is no placebo, no expectation. Horses and dogs in particular show clear, measurable change. Cozmo also clears homes, properties, and businesses where the energy feels stuck or heavy.
+      </p>
+
+<div class="s-tags">
+<span class="s-tag">Horses and dogs</span>
+<span class="s-tag">Other animals</span>
+<span class="s-tag">Homes and properties</span>
+<span class="s-tag">Businesses</span>
+<span class="s-tag">Fully remote</span>
+</div>
+</div>
+<div class="service-item" id="teaching">
+<div class="service-num-title">
+<span class="s-num">04</span>
+<h3>IQM Teaching — Levels 1 and 2</h3>
+</div>
+<p>
+        Cozmo teaches Integrative Quantum Medicine in small, friendly groups over three days. You leave with a working toolkit — practical techniques for clearing your own energy, managing anxiety, and building genuine resilience. It is one of the most useful things you can learn.
+      </p>
+<div class="s-tags">
+<span class="s-tag">Level 1 and Level 2</span>
+<span class="s-tag">3-day intensive</span>
+<span class="s-tag">Small groups</span>
+<span class="s-tag">No experience needed</span>
+</div>
+</div>
+</section>
+<!-- ══════════ HOW IT WORKS ══════════ -->
+<section class="how-section" id="how">
+<div class="section-head">
+<div>
+<span class="eyebrow">What to expect</span>
+<h2>Straightforward from the start. </h2>
+</div>
+
+</div>
+<div class="how-steps">
+<div class="how-step">
+<div class="step-n">01</div>
+<h4>Get in touch</h4>
+<p>Drop Cozmo an email. If it would help to have a quick call first, she is happy to arrange one.</p>
+</div>
+<div class="how-step">
+<div class="step-n">02</div>
+<h4>Your session</h4>
+<p>Find somewhere comfortable, lie down, and close your eyes. Cozmo works quietly — no need to explain yourself or guide the session.</p>
+</div>
+<div class="how-step">
+<div class="step-n">03</div>
+<h4>Afterwards</h4>
+<p>Most people feel notably lighter. Cozmo will share what came up and suggest next steps. No minimum commitment.</p>
+</div>
+</div>
+
+<div class="how-cta">
+<a class="btn" href="#contact">Get in Touch</a>
+</div>
+</section>
+<!-- ══════════ ABOUT ══════════ -->
+<section class="about-section" id="about">
+<div class="about-photo-wrap">
+<div class="about-photo-inner">
+<svg fill="none" height="44" stroke="#aaa" stroke-width="1" viewbox="0 0 24 24" width="44">
+<circle cx="12" cy="8" r="4.5"></circle>
+<path d="M3 21c0-5 3.8-8 9-8s9 3 9 8"></path>
+</svg>
+<p>PHOTO — COZMO<br/>At home, Dorset</p>
+</div>
+</div>
+<div class="about-text-col">
+<div class="about-text">
+<span class="eyebrow">About Cozmo</span>
+<p class="about-lead">
+          Cozmo has been practising for over 13 years, building a quiet reputation almost entirely through word of mouth. People come back, and they send their friends. 
+</p>
+<p class="body-copy">
+          She trained directly with Louise Mita, the founder of Integrative Quantum Medicine, completing all three levels in eleven months — a process that ordinarily takes five years. She then became the first IQM teacher in Europe.
+        </p>
+
+<div class="credentials">
+<div class="cred">Trained by Louise Mita, founder of IQM</div>
+<div class="cred">First IQM teacher in Europe</div>
+<div class="cred">Levels 1, 2 and 3 certified</div>
+<div class="cred">13 years in practice, based in Dorset</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ══════════ TESTIMONIALS ══════════ -->
+<section class="testi-section" id="testimonials">
+<div class="section-head">
+<div>
+<span class="eyebrow">Kind words</span>
+<h2>In their own words. </h2>
+</div>
+</div>
+<div class="testi-list">
+<div class="testi-card">
+<div>
+<span class="testi-mark">"</span>
+<p class="testi-text">Cozmo has an extraordinary gift for tuning into what people need and meeting them exactly where they are. Her work is thoughtful, compassionate, and deeply impactful in a way that is genuinely hard to put into words.</p>
+</div>
+<div class="testi-footer">
+<div class="testi-name">Rebecca Dennis</div>
+<div class="testi-context">Personal healing sessions</div>
+</div>
+</div>
+<div class="testi-card">
+<div>
+<span class="testi-mark">"</span>
+<p class="testi-text">The animals show just how powerful Cozmo is — they cannot surrender to the placebo effect, and the difference in their behaviour and healing is remarkable. I have also learned Level 1 and 2 myself and use it every single day.</p>
+</div>
+<div class="testi-footer">
+<div class="testi-name">Flora Hall</div>
+<div class="testi-context">Horse and dog owner · IQM Level 2 student</div>
+</div>
+</div>
+<div class="testi-card">
+<div>
+<span class="testi-mark">"</span>
+<p class="testi-text">Cozmo is a phenomenally wise healer. She is incredibly sensitive and helps me find my way back to my own power and self-respect. After a session I feel whole again, renewed — and I sleep like a baby.</p>
+</div>
+<div class="testi-footer">
+<div class="testi-name">Jenks</div>
+<div class="testi-context">Ongoing healing sessions</div>
+</div>
+</div>
+</div>
+
+</section>
+<!-- ══════════ CONTACT ══════════ -->
+<section class="contact-section" id="contact">
+<div class="contact-left">
+<div class="contact-intro">
+<span class="eyebrow">Get in touch</span>
+<h2>Get in touch. </h2>
+<p class="body-copy">
+          Whether you are ready to book or still weighing things up, Cozmo is happy to hear from you. Drop her a message and she will get back to you within a day or two.
+        </p>
+<div class="free-call">
+<strong>Free introductory call available.</strong> If you would like to have a conversation before booking, just mention it in your message and Cozmo will be in touch to arrange a time.
+        </div>
+</div>
+
+</div>
+<div class="contact-right">
+<div class="contact-form">
+<div class="form-field">
+<label>Your name</label>
+<input autocomplete="name" placeholder="Your name" type="text"/>
+</div>
+<div class="form-field">
+<label>Email address</label>
+<input autocomplete="email" placeholder="your@email.com" type="email"/>
+</div>
+<div class="form-field">
+<label>I am getting in touch about</label>
+<select>
+<option value="">Please select...</option>
+<option>Healing — for myself</option>
+<option>Healing — for my child</option>
+<option>Healing — for an animal</option>
+<option>Healing — for a home or property</option>
+<option>Support through illness or treatment</option>
+<option>IQM Teaching — Level 1</option>
+<option>IQM Teaching — Level 2</option>
+<option>A free introductory call</option>
+<option>Just finding out more</option>
+</select>
+</div>
+<div class="form-field">
+<label>Message <span style="font-size:10px; font-weight:normal; text-transform:none; letter-spacing:0; color:#ccc;">(optional)</span></label>
+<textarea placeholder="Tell Cozmo a little about what brings you here."></textarea>
+</div>
+<button class="form-submit" type="button">Send Message</button>
+<p class="form-note">Cozmo aims to reply within a day or two. Your details are kept private.</p>
+</div>
+</div>
+</section>
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="site-footer">
+<div class="footer-name">Cozmo Jenks</div>
+<ul class="footer-links">
+<li><a href="#">Healing</a></li>
+<li><a href="#">Teaching</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Get in Touch</a></li>
+</ul>
+<div class="footer-copy">© 2026 · Dorset, UK</div>
+</footer>
+<!-- ══════════ ANNOTATIONS ══════════ -->
+</div>
+</body>
+</html>
