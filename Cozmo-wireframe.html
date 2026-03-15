@@ -505,7 +505,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  flex: 0 0 100%;
+  flex-shrink: 0;
   box-sizing: border-box;
 }
 .testi-mark {
@@ -865,7 +865,6 @@ h2 {
 
   /* Testimonials */
   .testi-section { padding: 64px 48px; }
-  .testi-carousel { max-width: 680px; margin-left: auto; margin-right: auto; }
   .testi-placeholders {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1230,31 +1229,103 @@ h2 {
 </div>
 <script>
   (function() {
+    var carousel = document.getElementById('testiCarousel');
     var track = document.getElementById('testiTrack');
     var dotsContainer = document.getElementById('testiDots');
-    var cards = track.querySelectorAll('.testi-card');
-    var total = cards.length;
+    var origCards = Array.from(track.querySelectorAll('.testi-card'));
+    var total = origCards.length;
+    var VISIBLE = 3;
     var current = 0;
+    var animating = false;
+    var autoTimer;
 
-    // Build dots
+    // Clone first VISIBLE cards and append for seamless forward loop
+    origCards.slice(0, VISIBLE).forEach(function(c) {
+      var clone = c.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.appendChild(clone);
+    });
+
+    var allCards = Array.from(track.querySelectorAll('.testi-card'));
+
+    // Build dots (one per real card)
     for (var i = 0; i < total; i++) {
       var dot = document.createElement('div');
       dot.className = 'testi-dot' + (i === 0 ? ' active' : '');
       dot.setAttribute('data-index', i);
-      dot.addEventListener('click', function() { goTo(parseInt(this.getAttribute('data-index'))); });
+      dot.addEventListener('click', (function(idx) {
+        return function() { goTo(idx); resetTimer(); };
+      })(i));
       dotsContainer.appendChild(dot);
     }
 
-    function goTo(index) {
-      current = (index + total) % total;
-      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    function updateDots() {
+      var active = current % total;
       dotsContainer.querySelectorAll('.testi-dot').forEach(function(d, i) {
-        d.classList.toggle('active', i === current);
+        d.classList.toggle('active', i === active);
       });
     }
 
-    document.getElementById('testiPrev').addEventListener('click', function() { goTo(current - 1); });
-    document.getElementById('testiNext').addEventListener('click', function() { goTo(current + 1); });
+    function cardWidth() { return carousel.offsetWidth / VISIBLE; }
+
+    function setPosition(index, animate) {
+      track.style.transition = animate ? 'transform 0.5s ease' : 'none';
+      track.style.transform = 'translateX(' + (-index * cardWidth()) + 'px)';
+    }
+
+    function goTo(index) {
+      if (animating) return;
+      animating = true;
+      current = index;
+      setPosition(current, true);
+      updateDots();
+    }
+
+    track.addEventListener('transitionend', function() {
+      animating = false;
+      if (current >= total) {
+        current -= total;
+        setPosition(current, false);
+        updateDots();
+      }
+    });
+
+    function calcWidths() {
+      var w = cardWidth();
+      allCards.forEach(function(c) { c.style.width = w + 'px'; });
+      setPosition(current, false);
+    }
+
+    function resetTimer() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(function() { goTo(current + 1); }, 4000);
+    }
+
+    document.getElementById('testiPrev').addEventListener('click', function() {
+      if (animating) return;
+      resetTimer();
+      if (current <= 0) {
+        // Snap to clone region then animate backward
+        current = total;
+        setPosition(current, false);
+        track.offsetHeight; // force reflow
+        animating = true;
+        current = total - 1;
+        setPosition(current, true);
+        updateDots();
+      } else {
+        goTo(current - 1);
+      }
+    });
+
+    document.getElementById('testiNext').addEventListener('click', function() {
+      goTo(current + 1);
+      resetTimer();
+    });
+
+    window.addEventListener('resize', calcWidths);
+    calcWidths();
+    resetTimer();
   })();
 </script>
 </body>
