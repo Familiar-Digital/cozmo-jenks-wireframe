@@ -483,6 +483,15 @@ h2 {
   padding: 40px 24px;
   border-bottom: 1px solid #ddd;
 }
+.testi-carousel {
+  position: relative;
+  margin-top: 28px;
+  overflow: hidden;
+}
+.testi-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
 .testi-list {
   display: flex;
   flex-direction: column;
@@ -496,6 +505,8 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  flex: 0 0 100%;
+  box-sizing: border-box;
 }
 .testi-mark {
   font-size: 40px;
@@ -527,6 +538,46 @@ h2 {
   font-size: 11px;
   color: #aaa;
   margin-top: 2px;
+}
+.testi-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+.testi-btn {
+  background: none;
+  border: 1px solid #ccc;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, color 0.2s;
+}
+.testi-btn:hover {
+  border-color: #333;
+  color: #111;
+}
+.testi-dots {
+  display: flex;
+  gap: 8px;
+}
+.testi-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.testi-dot.active {
+  background: #555;
 }
 .testi-placeholder {
   border: 1px dashed #ccc;
@@ -812,13 +863,9 @@ h2 {
   .about-text-col { padding: 64px 48px; }
   .about-text-col .about-text { height: 100%; justify-content: center; display: flex; flex-direction: column; gap: 14px; }
 
-  /* Testimonials: 3 across */
+  /* Testimonials */
   .testi-section { padding: 64px 48px; }
-  .testi-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    flex-direction: unset;
-  }
+  .testi-carousel { max-width: 680px; margin-left: auto; margin-right: auto; }
   .testi-placeholders {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1058,37 +1105,64 @@ h2 {
 <h2>In their own words. </h2>
 </div>
 </div>
-<div class="testi-list">
-<div class="testi-card">
-<div>
-<span class="testi-mark">"</span>
-<p class="testi-text">Cozmo has an extraordinary gift for tuning into what people need and meeting them exactly where they are. Her work is thoughtful, compassionate, and deeply impactful in a way that is genuinely hard to put into words.</p>
-</div>
-<div class="testi-footer">
-<div class="testi-name">Rebecca Dennis</div>
-<div class="testi-context">Personal healing sessions</div>
-</div>
-</div>
-<div class="testi-card">
-<div>
-<span class="testi-mark">"</span>
-<p class="testi-text">The animals show just how powerful Cozmo is — they cannot surrender to the placebo effect, and the difference in their behaviour and healing is remarkable. I have also learned Level 1 and 2 myself and use it every single day.</p>
-</div>
-<div class="testi-footer">
-<div class="testi-name">Flora Hall</div>
-<div class="testi-context">Horse and dog owner · IQM Level 2 student</div>
-</div>
-</div>
-<div class="testi-card">
-<div>
-<span class="testi-mark">"</span>
-<p class="testi-text">Cozmo is a phenomenally wise healer. She is incredibly sensitive and helps me find my way back to my own power and self-respect. After a session I feel whole again, renewed with clear and focussed energy and a zest for life</p>
-</div>
-<div class="testi-footer">
-<div class="testi-name">Patti Worcester</div>
-<div class="testi-context"></div>
-</div>
-</div>
+<div class="testi-carousel" id="testiCarousel">
+  <div class="testi-track" id="testiTrack">
+    <div class="testi-card">
+      <div>
+        <span class="testi-mark">"</span>
+        <p class="testi-text">Cozmo has an extraordinary gift for tuning into what people need and meeting them exactly where they are. Her work is thoughtful, compassionate, and deeply impactful in a way that is genuinely hard to put into words.</p>
+      </div>
+      <div class="testi-footer">
+        <div class="testi-name">Rebecca Dennis</div>
+        <div class="testi-context">Personal healing sessions</div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div>
+        <span class="testi-mark">"</span>
+        <p class="testi-text">The animals show just how powerful Cozmo is — they cannot surrender to the placebo effect, and the difference in their behaviour and healing is remarkable. I have also learned Level 1 and 2 myself and use it every single day.</p>
+      </div>
+      <div class="testi-footer">
+        <div class="testi-name">Flora Hall</div>
+        <div class="testi-context">Horse and dog owner · IQM Level 2 student</div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div>
+        <span class="testi-mark">"</span>
+        <p class="testi-text">Cozmo is a phenomenally wise healer. She is incredibly sensitive and helps me find my way back to my own power and self-respect. After a session I feel whole again, renewed with clear and focussed energy and a zest for life</p>
+      </div>
+      <div class="testi-footer">
+        <div class="testi-name">Patti Worcester</div>
+        <div class="testi-context"></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div>
+        <span class="testi-mark">"</span>
+        <p class="testi-text">Coz has an extraordinary gift for tuning into what people need and meeting them exactly where they are. Her work is thoughtful, compassionate, and deeply impactful in a way that's hard to put into words. I have tremendous respect for what she does and the way she shows up for every person she works with.</p>
+      </div>
+      <div class="testi-footer">
+        <div class="testi-name">Rebecca Dennis</div>
+        <div class="testi-context"></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div>
+        <span class="testi-mark">"</span>
+        <p class="testi-text">I know that what Cozmo Jenks does is ultimately rooted in quantum physics, but it has always felt like real magic to me. Initially, a personal session wasn't what I expected; it wasn't a quick hit of something that felt unnatural, it was and is a return to feeling myself, to a sense of inner peace and confidence that makes me say "oh, THIS is how I'm meant to feel — this is me!" I love that it's nothing like talk therapy, is done mostly in silence, and can easily and effectively be done remotely. Coz has had a positive and profound effect on my family's life — from clearing the house (felt completely quiet and peaceful after) to helping our son overcome his years-long fear of reading. The list goes on and on, but ultimately I can't recommend or vouch for Coz and her technique enough. What Coz does is absolutely real, absolutely worth exploring, and, at least to my mind, total contemporary magic.</p>
+      </div>
+      <div class="testi-footer">
+        <div class="testi-name">Freddie Wimsett</div>
+        <div class="testi-context"></div>
+      </div>
+    </div>
+  </div>
+  <div class="testi-nav">
+    <button class="testi-btn" id="testiPrev">&#8592;</button>
+    <div class="testi-dots" id="testiDots"></div>
+    <button class="testi-btn" id="testiNext">&#8594;</button>
+  </div>
 </div>
 
 </section>
@@ -1154,5 +1228,34 @@ h2 {
 </footer>
 <!-- ══════════ ANNOTATIONS ══════════ -->
 </div>
+<script>
+  (function() {
+    var track = document.getElementById('testiTrack');
+    var dotsContainer = document.getElementById('testiDots');
+    var cards = track.querySelectorAll('.testi-card');
+    var total = cards.length;
+    var current = 0;
+
+    // Build dots
+    for (var i = 0; i < total; i++) {
+      var dot = document.createElement('div');
+      dot.className = 'testi-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('data-index', i);
+      dot.addEventListener('click', function() { goTo(parseInt(this.getAttribute('data-index'))); });
+      dotsContainer.appendChild(dot);
+    }
+
+    function goTo(index) {
+      current = (index + total) % total;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dotsContainer.querySelectorAll('.testi-dot').forEach(function(d, i) {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    document.getElementById('testiPrev').addEventListener('click', function() { goTo(current - 1); });
+    document.getElementById('testiNext').addEventListener('click', function() { goTo(current + 1); });
+  })();
+</script>
 </body>
 </html>
