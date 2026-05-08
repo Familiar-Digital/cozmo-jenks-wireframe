@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy Healing in Dorset &amp; Worldwide | Cozmo Jenks</title>
+  <meta name="description" content="Energy healing for people, animals and homes. Remote or in Dorset. 13+ years experience. Sessions are quiet, precise and often life-changing.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Energy Healing in Dorset &amp; Worldwide | Cozmo Jenks">
+  <meta property="og:description" content="Energy healing for people, animals and homes. Remote or in Dorset. 13+ years experience.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#f5f0e8',
+            green: '#1e5c30',
+            coral: '#e8593a',
+            amber: '#f4b429',
+            sky:   '#7bbfcc',
+            lav:   '#b8a4d8',
+            ink:   '#1a1a18',
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            syne:    ['"Syne"', 'system-ui', 'sans-serif'],
+            body:    ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: #f5f0e8;
+      color: #1a1a18;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── Grain overlay ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 180px 180px;
+      opacity: 0.022;
+      pointer-events: none; z-index: 9999;
+      mix-blend-mode: multiply;
+    }
+
+    /* ── Focus ── */
+    :focus-visible { outline: 2px solid #e8593a; outline-offset: 3px; border-radius: 2px; }
+
+    /* ── NAV ── */
+    #site-nav { background: #f5f0e8; border-bottom: 1px solid rgba(26,26,24,0.08); }
+
+    .nav-link {
+      font-family: 'Syne', system-ui, sans-serif;
+      font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(26,26,24,0.5); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: #1a1a18; }
+    footer .nav-link:hover { color: rgba(245,240,232,0.85) !important; }
+
+    /* ── Buttons ── */
+    .btn-coral {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: #e8593a; color: #f5f0e8;
+      font-family: 'Syne', system-ui, sans-serif;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 0.85rem 1.75rem; border-radius: 100px;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-coral:hover { background: #d04e31; transform: translateY(-1px); }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: transparent; color: #1a1a18;
+      font-family: 'Syne', system-ui, sans-serif;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 0.85rem 1.75rem; border-radius: 100px;
+      border: 2px solid #1a1a18; text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { background: #1a1a18; color: #f5f0e8; }
+
+    .btn-cream {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: #f5f0e8; color: #1a1a18;
+      font-family: 'Syne', system-ui, sans-serif;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 0.85rem 1.75rem; border-radius: 100px;
+      text-decoration: none; transition: background 0.2s;
+    }
+    .btn-cream:hover { background: #e8e3db; }
+
+    .btn-ink {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: #1a1a18; color: #f5f0e8;
+      font-family: 'Syne', system-ui, sans-serif;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 0.85rem 1.75rem; border-radius: 100px;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-ink:hover { background: #333330; }
+
+    /* ── Eyebrow labels ── */
+    .eyebrow {
+      font-family: 'Syne', system-ui, sans-serif;
+      font-size: 0.62rem; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+    }
+
+    /* ── Hero ── */
+    .hero-section { background: #f5f0e8; position: relative; overflow: hidden; }
+
+    /* Arch image frame */
+    .arch-wrap {
+      position: relative;
+      width: min(260px, 100%);
+      margin: 0 auto;
+    }
+    @media (min-width: 1024px) {
+      .arch-wrap { width: 100%; max-width: 400px; }
+    }
+
+    .arch-frame {
+      width: 100%; aspect-ratio: 2 / 3;
+      border-radius: 999px 999px 12px 12px;
+      overflow: hidden;
+      position: relative; z-index: 2;
+      box-shadow: 0 32px 72px rgba(26,26,24,0.18);
+    }
+    .arch-frame .img-hold { width: 100%; height: 100%; }
+
+    /* Botanical leaves — positioned behind arch (z-index: 1) */
+    .leaf { position: absolute; pointer-events: none; z-index: 1; }
+
+    /* Step cards for How It Works */
+    .step-card {
+      background: #f5f0e8;
+      border-radius: 20px;
+      padding: clamp(1.5rem, 3vw, 2.25rem);
+      position: relative; overflow: hidden;
+    }
+
+    /* Floating squiggle shapes */
+    .sq {
+      position: absolute; pointer-events: none; z-index: 0;
+      animation: sq-float 7s ease-in-out infinite;
+    }
+    @keyframes sq-float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+
+    /* ── Hero animation ── */
+    .h-anim { opacity: 0; transform: translateY(18px); animation: hIn 0.9s cubic-bezier(0.16,1,0.3,1) forwards; }
+    .h-anim.d1 { animation-delay: 0.10s; }
+    .h-anim.d2 { animation-delay: 0.22s; }
+    .h-anim.d3 { animation-delay: 0.36s; }
+    .h-anim.d4 { animation-delay: 0.50s; }
+    .h-anim.d5 { animation-delay: 0.66s; }
+    @keyframes hIn { to { opacity: 1; transform: none; } }
+
+    /* ── Ticker ── */
+    .ticker-band { background: #1e5c30; overflow: hidden; }
+    .ticker-inner {
+      display: flex; white-space: nowrap; align-items: center;
+      width: max-content;
+      animation: marquee 30s linear infinite;
+    }
+    .ticker-inner:hover { animation-play-state: paused; }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .ticker-item {
+      font-family: 'Syne', system-ui, sans-serif;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: #f5f0e8; padding: 0 2rem;
+    }
+    .ticker-sep { color: #f4b429; font-size: 0.65rem; flex-shrink: 0; }
+
+    /* ── Image placeholder ── */
+    .img-hold { position: relative; overflow: hidden; background: #d1d1d1; }
+    .img-hold img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .img-hold::after {
+      content: 'Add photography here';
+      position: absolute; bottom: 1rem; left: 0; right: 0; text-align: center;
+      font-family: 'DM Sans', sans-serif; font-size: 0.58rem;
+      letter-spacing: 0.24em; text-transform: uppercase;
+      color: rgba(0,0,0,0.2); pointer-events: none;
+    }
+    .img-hold:has(img)::after { display: none; }
+
+    /* ── Tag pills ── */
+    .pill {
+      display: inline-flex; align-items: center;
+      padding: 0.2rem 0.7rem; border-radius: 100px;
+      font-family: 'DM Sans', sans-serif; font-size: 0.65rem;
+      color: rgba(26,26,24,0.6); background: rgba(26,26,24,0.06);
+      border: 1px solid rgba(26,26,24,0.1);
+    }
+
+    /* ── Service tabs ── */
+    .tab-list {
+      display: flex; gap: 0.5rem;
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; padding-bottom: 4px;
+    }
+    .tab-list::-webkit-scrollbar { display: none; }
+    .tab-btn {
+      display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0;
+      padding: 0.6rem 1.1rem; border-radius: 100px;
+      border: 2px solid rgba(26,26,24,0.14); background: transparent;
+      color: rgba(26,26,24,0.5);
+      font-family: 'Syne', system-ui, sans-serif;
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      cursor: pointer; white-space: nowrap; transition: all 0.2s;
+    }
+    .tab-btn:hover { border-color: #1a1a18; color: #1a1a18; }
+    .tab-btn[aria-selected="true"] { background: #e8593a; color: #f5f0e8; border-color: #e8593a; }
+
+    .tab-panel { display: none; }
+    .tab-panel.tab-active {
+      display: grid;
+      animation: tabIn 0.4s cubic-bezier(0.16,1,0.3,1) forwards;
+    }
+    @media (min-width: 1024px) {
+      .tab-panel.tab-active { grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    }
+    @keyframes tabIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    .svc-icon {
+      width: 2.75rem; height: 2.75rem; border-radius: 14px;
+      background: rgba(232,89,58,0.1);
+      display: flex; align-items: center; justify-content: center;
+      color: #e8593a; margin-bottom: 1.25rem;
+    }
+
+    /* ── Step ghost numbers ── */
+    .step-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(5rem,13vw,9rem); font-weight: 600; line-height: 1;
+      color: rgba(245,240,232,0.12);
+      pointer-events: none; user-select: none;
+      position: absolute; top: -0.12em; left: -0.08em;
+    }
+
+    /* ── Testimonials ── */
+    .t-nav-btn {
+      width: 3rem; height: 3rem; border-radius: 50%;
+      border: 2px solid rgba(26,26,24,0.15);
+      background: transparent; color: #1a1a18;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; flex-shrink: 0;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .t-nav-btn:hover { background: #e8593a; color: #f5f0e8; border-color: #e8593a; }
+    .t-word {
+      display: inline-block; margin-right: 0.28em;
+      opacity: 0; transform: translateY(6px);
+      transition: opacity 0.42s cubic-bezier(0.22,1,0.36,1), transform 0.42s cubic-bezier(0.22,1,0.36,1);
+    }
+    .t-word.in { opacity: 1; transform: none; }
+
+    /* ── Form ── */
+    .f-input {
+      width: 100%; background: white;
+      border: 2px solid rgba(26,26,24,0.12); color: #1a1a18;
+      font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 300;
+      padding: 0.85rem 1rem; border-radius: 10px; transition: border-color 0.2s;
+    }
+    .f-input::placeholder { color: rgba(26,26,24,0.28); }
+    .f-input:focus { outline: none; border-color: #e8593a; }
+
+    /* ── Credential list ── */
+    .cred-item { padding-left: 1.1rem; position: relative; }
+    .cred-item::before {
+      content: ''; position: absolute; left: 0; top: 0.6em;
+      width: 5px; height: 1px; background: #f5f0e8;
+    }
+
+    /* ── Mobile menu ── */
+    #mob-menu { display: none; }
+    #mob-menu.open { display: block; }
+
+    /* ── Scroll reveal ── */
+    .reveal {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.85s cubic-bezier(0.16,1,0.3,1), transform 0.85s cubic-bezier(0.16,1,0.3,1);
+    }
+    .reveal.in { opacity: 1; transform: none; }
+    .reveal.d1 { transition-delay: 0.08s; }
+    .reveal.d2 { transition-delay: 0.16s; }
+    .reveal.d3 { transition-delay: 0.24s; }
+    .reveal.d4 { transition-delay: 0.32s; }
+  </style>
+</head>
+
+<body>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [{
+    "@type": ["Person","LocalBusiness"],
+    "@id": "https://cozmojenks.com/#person",
+    "name": "Cozmo Jenks",
+    "jobTitle": "Energy Healer & IQM Teacher",
+    "description": "Energy healing for people, animals and homes. Remote or in Dorset. 13+ years experience.",
+    "url": "https://cozmojenks.com",
+    "address": { "@type": "PostalAddress", "addressRegion": "Dorset", "addressCountry": "GB" },
+    "areaServed": "Worldwide",
+    "priceRange": "££",
+    "review": [
+      { "@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Rebecca Dennis"},"reviewBody":"Cozmo has an extraordinary gift for tuning into what people need and meeting them exactly where they are. Her work is thoughtful, compassionate, and deeply impactful." },
+      { "@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Flora Hall"},"reviewBody":"The animals show just how powerful Cozmo is — they cannot surrender to the placebo effect, and the difference in their behaviour and healing is remarkable." },
+      { "@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Patti Worcester"},"reviewBody":"Cozmo is a phenomenally wise healer. After a session I feel whole again, renewed with clear and focussed energy." },
+      { "@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Freddie Wimsett"},"reviewBody":"What Coz does is absolutely real, absolutely worth exploring, and total contemporary magic." }
+    ]
+  }]
+}
+</script>
+
+
+<!-- ════════════════════════════════════
+     NAV
+════════════════════════════════════ -->
+<header id="site-nav" class="fixed top-0 left-0 right-0 z-50" role="banner">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-12 h-16 flex items-center justify-between" aria-label="Main navigation">
+    <a href="/" class="font-display text-xl font-normal tracking-wide text-ink hover:text-coral transition-colors" aria-label="Cozmo Jenks — homepage">
+      Cozmo Jenks
+    </a>
+    <ul class="hidden md:flex items-center gap-8" role="list">
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#how"      class="nav-link">How it works</a></li>
+      <li><a href="#about"    class="nav-link">About</a></li>
+      <li><a href="#contact"  class="btn-coral" style="padding:0.55rem 1.2rem;font-size:0.62rem;">Get in Touch</a></li>
+    </ul>
+    <button id="hamburger" class="md:hidden p-2 flex flex-col gap-1.5" aria-expanded="false" aria-controls="mob-menu" aria-label="Open menu">
+      <span id="ham-1" style="display:block;width:22px;height:2px;background:#1a1a18;border-radius:2px;transition:transform .3s,opacity .3s;"></span>
+      <span id="ham-2" style="display:block;width:22px;height:2px;background:#1a1a18;border-radius:2px;transition:opacity .3s;"></span>
+      <span id="ham-3" style="display:block;width:22px;height:2px;background:#1a1a18;border-radius:2px;transition:transform .3s,opacity .3s;"></span>
+    </button>
+  </nav>
+  <div id="mob-menu" class="md:hidden" style="background:#f5f0e8;border-top:1px solid rgba(26,26,24,0.08);">
+    <ul class="px-6 py-6 flex flex-col gap-6" role="list">
+      <li><a href="#services" class="nav-link block" style="color:rgba(26,26,24,0.8);">Services</a></li>
+      <li><a href="#how"      class="nav-link block" style="color:rgba(26,26,24,0.8);">How it works</a></li>
+      <li><a href="#about"    class="nav-link block" style="color:rgba(26,26,24,0.8);">About</a></li>
+      <li><a href="#contact"  class="btn-coral w-full">Get in Touch</a></li>
+    </ul>
+  </div>
+</header>
+
+
+<main>
+
+<!-- ════════════════════════════════════
+     HERO
+════════════════════════════════════ -->
+<section id="hero" class="hero-section min-h-screen flex items-center pt-16" aria-labelledby="hero-h1">
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24 w-full" style="z-index:2;">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 lg:items-start">
+
+      <!-- TEXT -->
+      <div class="order-2 lg:order-1">
+        <p class="h-anim d1 eyebrow text-coral mb-6" style="display:flex;align-items:center;gap:0.5em;">
+          <span style="width:7px;height:7px;border-radius:50%;background:#e8593a;display:inline-block;flex-shrink:0;" aria-hidden="true"></span>
+          Energy Healer &amp; IQM Teacher · Dorset, UK
+        </p>
+
+        <h1 id="hero-h1" class="h-anim d2 font-display font-light text-ink leading-none mb-8"
+            style="font-size:clamp(2.6rem,8vw,7.5rem);">
+          Energy healing that <em class="italic" style="color:#e8593a;">genuinely</em> works.
+        </h1>
+
+        <p class="h-anim d3 font-body font-light max-w-lg mb-10"
+           style="font-size:1rem;line-height:1.76;color:rgba(26,26,24,0.62);">
+          Cozmo works with people, animals, and homes across the world. Her sessions are quiet, precise, and often life-changing — available remotely, wherever you are.
+        </p>
+
+        <div class="h-anim d4 flex flex-col sm:flex-row gap-3 mb-14">
+          <a href="#contact" class="btn-coral">Get in Touch</a>
+          <a href="#how"     class="btn-outline">How it works</a>
+        </div>
+
+        <div class="h-anim d5 flex flex-col sm:flex-row gap-8 sm:gap-12 pt-8"
+             style="border-top:1px solid rgba(26,26,24,0.1);">
+          <div>
+            <p class="font-display font-light text-coral" style="font-size:clamp(2.2rem,5vw,3rem);line-height:1;">13+</p>
+            <p class="font-syne mt-1" style="font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(26,26,24,0.4);">Years in practice</p>
+          </div>
+          <div class="hidden sm:block" style="width:1px;background:rgba(26,26,24,0.1);"></div>
+          <div>
+            <p class="font-display font-light text-coral" style="font-size:clamp(2.2rem,5vw,3rem);line-height:1;">1st</p>
+            <p class="font-syne mt-1" style="font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(26,26,24,0.4);">IQM teacher in Europe</p>
+          </div>
+          <div class="hidden sm:block" style="width:1px;background:rgba(26,26,24,0.1);"></div>
+          <div>
+            <p class="font-display font-light text-coral" style="font-size:clamp(2.2rem,5vw,3rem);line-height:1;">Global</p>
+            <p class="font-syne mt-1" style="font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(26,26,24,0.4);">Remote, worldwide</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- IMAGE — decorative botanical arrangement with placeholder -->
+      <div class="h-anim d3 flex justify-center lg:justify-end order-1 lg:order-2">
+        <div class="arch-wrap" style="position:relative;" aria-hidden="false">
+
+          <!-- Halo accent at top -->
+          <div style="position:absolute;top:-8%;left:50%;transform:translateX(-50%);width:clamp(100px,18vw,200px);z-index:5;" aria-hidden="true">
+            <svg viewBox="0 0 118.42 33.42" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <style>
+                  .halo-stroke { fill: none; stroke: #f791b0; stroke-miterlimit: 10; stroke-width: 8px; }
+                </style>
+              </defs>
+              <path class="halo-stroke" d="M75.06,4.96C30.03-1.47-30.03,26.44,27.84,29.1s134.35-11.7,47.22-24.14Z"/>
+            </svg>
+          </div>
+
+          <!-- Plant 1: Top-left monstera and yellow flower -->
+          <div style="position:absolute;top:-5%;left:-8%;width:clamp(80px,15vw,160px);z-index:3;" aria-hidden="true">
+            <svg viewBox="0 0 143.05 134.64" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <style>
+                  .p1-y { fill: #f7cb1f; }
+                  .p1-y2 { fill: #dece37; }
+                  .p1-g1 { fill: #0a9c36; }
+                  .p1-g2 { fill: #09854b; }
+                </style>
+              </defs>
+              <g>
+                <path class="p1-y" d="M140.5,72.31c-1.3,26.81-30.9,47.44-55.92,50.25-4.96-.86-10.51-1.55-12.16-6.9l2.93-7.42c3.32-8.41-6.98-5.82-4.72-13.58.5-1.73,5.02-2.51,6.45-1.08l9.45,9.38c11.34-7.93,24.39-.99,31.01-6.13l2.67-2.07c-.63.49,4.52-16.27-4.62-24.18-1.45-2.74-2.33-5.28-1.22-7.84-3.51-10.94-9.45-20.17-15.79-30.45l-2.09,2.97c-4.06-6.18-10.58-11.15-17.14-13.32l-7.15-2.37-2.56-6.32-1.07,4.87c-.18.8-2.03,1.35-2.77.74l-3.96-3.29c-.86-.72.18-3.62.82-4.55.74-1.08,3.23-.79,5.06-.94,0-.35-1.72-3.43-.9-3.76l3.57-1.45c13.67-5.56,37.78,1.39,49.08,12.93l11.02,11.25c3.52,3.59,5.93,7.96,7.19,13.03l3.19,12.82c1.34,5.37-2.27,14.35-2.93,13.26l2.54,4.18Z"/>
+                <path class="p1-g1" d="M51.54,17.3l.62-.57c.56.62,3.11.42,3.94.31,13.83-.49,12.58,26.49,9.27,41.46-.68,3.08-4.37,6.05-1.26,9.67,8.13-7.14,9.24-17.99,9.28-27.99.05-12.71-4.68-17.31-3.33-18.87l2.13-1.77,7.15,2.37c4.5,4.72,13.03,7.49,15.76,14.39,2.44,6.17-11.57,27.53-17.63,38.4.62.66,1.65,1.6,2.27,1.18l3.59-2.43c18.95-12.85,9.71-21.47,18.47-32.2,5.87,6.54,9.22,14.38,9.56,22.74.29,7.19,12.05,13.09,6.17,32.82-6.63,5.15-19.67-1.8-31.01,6.13l-9.45-9.38c-1.44-1.42-5.95-.65-6.45,1.08-2.26,7.76,8.04,5.18,4.72,13.58l-2.93,7.42-2.11,7.76-.42,3.7-1.82,5.09c-.32.71-.65,2.09-1.41,2.3s-3.04.17-3.83-.06l-20.76-6.28-7.45-5.25c6.68-2.08,9.69-3.98,13.78-8.23l5.8-6.03c1.18-1.23,3.18-5.43,1.53-5.94-2.03-.62-4.23,3.2-5.5,4.45-4.69,4.62-10.22,11.02-17.4,13.14-2.78.82-9.21-1.15-11.14-3.27l-8.23-8.55-3.41-6.63c4.84.77,10.01,1.16,15.18-.57l20.1-6.71c.6-.2,2.52-2.16,2.07-2.41l-1.45-.82c-2.26-1.28-32.53,15.49-40.83,2.29-1.68-2.8-3.26-7.83-3.82-10.96l.13-3.05,2.76-3.87c.91,1.66,2.23,4.56,3.45,4.52l4.27-.13c2.93,1.36,6.05,2.06,8.15.65l20.16-2.19c-3.64-6.39-8.93-3.49-13.49-4.3L0,69.56c.5-9.09-.1-17.08,1.28-25.28,1.04-6.22,2.23-12.07,1.68-18.03l.57-.64c10.25-2.39,20.81-8.33,32.05-8.53,9.9-.18,4.35,27.47,10.14,41.63,3.27-1.04,4.25-4.17,3.88-7.46l-2.21-19.79c-.58-5.17-3.99-10.25-6.69-15.3l10.85,1.14Z"/>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Plant 2: Bottom-left and bottom area -->
+          <div style="position:absolute;bottom:-8%;left:-12%;width:clamp(100px,20vw,180px);z-index:2;" aria-hidden="true">
+            <svg viewBox="0 0 140.05 154.51" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <style>
+                  .p2-pink { fill: #f791b0; }
+                  .p2-coral { fill: #f06735; }
+                  .p2-coral2 { fill: #ec6946; }
+                  .p2-y { fill: #dece37; }
+                  .p2-y2 { fill: #f1ad18; }
+                </style>
+              </defs>
+              <path class="p2-pink" d="M58.21,109.75l9.65,4.03c1.82,1.69,4.19,3.43,6.11,4.37l.97.65,6.36,7.91c4.17,5.19,9.71,8.37,16.56,8.87.74-4.28-2.37-4.73-5.17-6.38-5.1-2.99-9.62-6.76-13.97-9.9l-2.02-2.94-.92-1.31-2.71-4.07c2.8.83,5.98,2.48,8.15,4.09l5.08,3.78c11.61,8.63,9.18-19.1,34.91-38.31,3.83-2.86,10.21-6.75,14.42-3.3,4.97,4.08,5.14,11.44,3.44,17.45-3.42,12.09-17.11,13.68-27.02,20.55-3.78,9.75-5.61,21.14-14.07,27.63-6.47,4.96-19.23-9.04-25.21-7.81-10.38,2.13-11.13,17.54-26.28,19.41-3.37.41-7.7-2.38-9.1-4.72-6.85-11.47,8.47-30.47,20.93-38.72l-.13-1.27Z"/>
+              <path class="p2-coral" d="M55.9,70.66c.36,2.92,1.38,5.83,2.52,8.45l-1.04-5.26,6.29,13.01,2.99,16.72c.48,2.7,5.15,5.38,6.42,7.4l2.71,4.07-2.13.77c-.55.2-1.47-1.57-1.98-2.23-.56-.72-2.66-.33-3.82.19l-9.65-4.03c-22.28-1.85-42.48,8.68-58.21-15.53l44.8,7.54,2.03.35,1.51.46.66-.21.37.97c.32.83,2.01,1.87,2.85,1.55l3.73-1.42,6.31,3.18c.05-7.09-3.08-11.04-6.56-16.3l-1.56-2.37c-.22-.33-1.2.17-1.54.43-5.05-9.96-9.25-20.38-12.88-31.64,6.3,3.35,12.94,9.24,16.16,13.91Z"/>
+              <path class="p2-y2" d="M101.92,63.98c-.82-.2-1.9-.53-2.03-.12l-.7,2.21c-1.36,4.32-3.97,7.58-7.58,10.35l-1.04,6.3-.55,2.69-4.76,3.27-2.21-12.27,2.75.91c.5.16,4.05-4.54,3.67-10.81-.41-6.86,2.29-13.17,3.65-19.59,3.06-3.78,5.71-7.83,7.36-12.02,2.67-6.76,3.49-14.43,10.03-19.9,1.93,17.11-1.48,34.57-8.58,48.98Z"/>
+              <path class="p2-coral2" d="M61.2,4.01c18.7,18.77,15.89,42.41,23.76,67.62l-2.88,2.91-.88-1.73-10.45-29.94-11.58-33.19-1.51-4.82,3.54-.84Z"/>
+              <path class="p2-coral" d="M35.3,67.92c-.78.51-1.18,3.61-.81,4.64l5.26,14.52-1.86.75c-.06-.09-.14-.47-.18-.59l-1.36-3.02c-.24-.52-1.45-.37-2.23.03L15.3,47.48c-1.39-5.31-3.88-9.49-7.17-13.33l-.21-5.68c5.91,2.9,9.53,9.19,14.15,14.22,7.2,7.85,10.67,15.43,13.23,25.23Z"/>
+              <path class="p2-y" d="M89.46,66.51c.37,6.27-3.18,10.98-3.67,10.81l-2.75-.91,2.21,12.27,4.76-3.27-2.47,5.61c-1.64,3.72-.52,9.42.04,13.31l1.19,8.27c.08.55-1.15,2.18-1.71,2.02l-2-.6-.65-2.98-.41-4.83-2.8-33.4.88,1.73,2.88-2.91c1.06.23,1.95.41,2.16-.21l1.28-3.71c.24-1.22.3-1.56,1.06-1.2Z"/>
+              <path class="p2-coral2" d="M52.61,88.4c.34-.26,1.32-.76,1.54-.43l1.56,2.37c3.48,5.26,6.61,9.21,6.56,16.3l-6.31-3.18-3.73,1.42c-.83.32-2.53-.72-2.85-1.55h4.29c-.14-1.41-.15-1.56-.22-1.14l-5.61-3.88-1.36,1.35-1.09-1.35c1-1.84-1.58-4.28-3.88-5.16l-3.63-5.32,1.86-.75-5.26-14.52c-.37-1.03.03-4.13.81-4.64,5.53,21.17,7.03,20.52,25.38,36.57-1.1-6.94-5.45-10.94-8.06-16.1Z"/>
+              <path class="p2-y" d="M70.76,42.86l-7.16-16.27c-2.28-5.72-5.48-11.11-4.42-16.92l11.58,33.19Z"/>
+              <path class="p2-y" d="M101.92,63.98c-1.88,4.65-4.45,9.4-7.49,13.77l-3.86,4.97,1.04-6.3c3.61-2.78,6.22-6.04,7.58-10.35l.7-2.21c.13-.41,1.21-.07,2.03.12Z"/>
+              <path class="p2-coral2" d="M61.2,4.01l-3.54.84L56.32.08c3.82-.65,3.83,2.87,4.88,3.93Z"/>
+              <path class="p2-y" d="M7.92,28.47l.21,5.68c-1.62-1.89-2.64-4.33-3.62-7.44l3.41,1.75Z"/>
+              <path class="p2-y" d="M57.39,73.85l1.04,5.26c-1.14-2.62-2.16-5.53-2.52-8.45.58.85,1.33,2.44,1.48,3.19Z"/>
+              <path class="p2-y" d="M37.71,87.24l-3.59-3c.77-.4,1.99-.55,2.23-.03l1.36,3.02Z"/>
+              <path class="p2-y" d="M78.73,119.3c4.35,3.15,8.87,6.91,13.97,9.9,2.81,1.65,5.91,2.11,5.17,6.38-6.86-.5-12.39-3.68-16.56-8.87l-6.36-7.91,3.79.5Z"/>
+              <path class="p2-y" d="M75.79,115.05l.92,1.31-2.74,1.78c-1.92-.94-4.3-2.68-6.11-4.37,1.16-.51,3.26-.91,3.82-.19.51.66,1.43,2.43,1.98,2.23l2.13-.77Z"/>
+              <polygon class="p2-coral" points="76.72 116.36 78.73 119.3 74.94 118.8 73.98 118.14 76.72 116.36"/>
+              <path class="p2-coral" d="M53.68,103.33l-.22-1.14c.07-.42.08-.27.22,1.14Z"/>
+            </svg>
+          </div>
+
+          <!-- Plant 3: Bottom-right with green and yellow -->
+          <div style="position:absolute;bottom:-5%;right:-10%;width:clamp(120px,18vw,180px);z-index:5;" aria-hidden="true">
+            <svg viewBox="0 0 162.79 114.47" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <style>
+                  .p3-pink { fill: #fcafc3; }
+                  .p3-y { fill: #f1ad18; }
+                  .p3-g1 { fill: #0a9c36; }
+                  .p3-g2 { fill: #09854b; }
+                </style>
+              </defs>
+              <path class="p3-y" d="M110.56,34.64c6.31,2.93,10.7.86,13.83-4.05,2.6-4.08,6.21-9.09,2.91-14.16-2.57-3.94-11.62-3.78-14.2.54-3.11,5.19-2.61,11.71-2.54,17.67Z"/>
+              <path class="p3-y" d="M142.33,68.87c5.4,2.03,11.3.33,14.47-3.25,2.52-2.84,8.22-9.43,5.06-13.33-4.22-5.21-20.51,4.38-21.99,8.39-.86,2.35.12,7.32,2.45,8.19Z"/>
+              <path class="p3-y" d="M120.53,62.92c1.76,1.49,6.86.67,8.61-.92,2.54-2.32,2.89-5.45,3.82-9.02,1.17-4.45,2.5-6.86-1.55-9.78-3.58-2.58-6.39-1.29-9.59,1.84-5.12,5-7.73,12.41-1.3,17.88Z"/>
+              <path class="p3-y" d="M91.41,53.57l-3.97,7.02c-.57,1.01-.11,3.82-.13,4.92,4.06,1.5,9.83,3.72,14.16.76,3.2-2.18,5.31-8.53,5.43-12.38.1-3.24-4.39-4.81-6.62-3.56l-7.42,4.17c-.96,1.48-1.61,1.3-1.44-.94Z"/>
+              <g>
+                <path class="p3-g2" d="M42.56,54.54l3.08,11.63-2.94-4.76C29.78,45.62,20.57,34.09,0,25.11l11.04,29.31c5.2,13.81,13.35,26.36,21.57,38.03,2.38,3.37,6.88,7.2,10.19,9.84l7.3,5.82c7.75,6.17,17.71,8.56,26.88,3.99l21.92-10.91c6.57-3.27,12.24-7.2,17.93-11.91-.66-2.67.21-8,1.8-10.38.24-2.55,2.69-6.29,4.97-6.9,2.54-.68,7.1-.24,9.34.69l2.97-6.03c-20.3.87-37.68,5.27-54.71,15.01l6.1-16.17c.02-1.09-.45-3.91.13-4.92l3.97-7.02,2.13-9.86-9.85-.1c-4.55-12.43,14.49-14.66,14.72-19.91l.35-7.47-9.56-.74c-9.27,11.08-15.21,26.62-20.7,39.99l-2.08,5.29-.11,1.99-2.24,10.18-1.62-9.2c-1.52-8.63-5.45-16.78-8.5-25.42l-7.35-20.76c-2.55-7.2-7-13.2-12.75-17.57-.44,19.71,4.8,36.8,8.71,54.54Z"/>
+                <path class="p3-y" d="M118.64,78.9c-1.6,2.37-2.46,7.71-1.8,10.38.55,1.5,3.12,3.66,4.67,4.11,7.33,2.13,16.89-14.91,11.25-19.77-5.2-2.91-11.14.87-14.11,5.28Z"/>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Central grey placeholder box -->
+          <div class="arch-frame" style="position:relative;z-index:4;">
+            <div class="img-hold" aria-hidden="true" style="width:100%;height:100%;"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+     TICKER BAND
+════════════════════════════════════ -->
+<div class="ticker-band py-4" aria-hidden="true">
+  <div class="ticker-inner">
+    <span class="ticker-item">13+ Years in Practice</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">Remote &amp; Worldwide</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">People, Animals &amp; Homes</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">First IQM Teacher in Europe</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">Energy Healing · Dorset UK</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">Free Introductory Call</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">13+ Years in Practice</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">Remote &amp; Worldwide</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">People, Animals &amp; Homes</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">First IQM Teacher in Europe</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">Energy Healing · Dorset UK</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">Free Introductory Call</span><span class="ticker-sep">✦</span>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════
+     SERVICES — white
+════════════════════════════════════ -->
+<section id="services" class="py-24 lg:py-32 relative" style="background:#f5f0e8;" aria-labelledby="services-h2">
+
+  <!-- Botanical corner, top-right -->
+  <div style="position:absolute;top:-2%;right:-2%;width:clamp(100px,14vw,200px);opacity:0.22;pointer-events:none;transform:rotate(30deg);z-index:1;" aria-hidden="true">
+    <svg viewBox="0 0 139.8 141.01" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          .p6-coral { fill: #f06735; }
+          .p6-pink { fill: #fcafc3; }
+          .p6-blue1 { fill: #145fe8; }
+          .p6-blue2 { fill: #0461f5; }
+          .p6-coral2 { fill: #f56731; }
+          .p6-coral3 { fill: #ec6946; }
+          .p6-green { fill: #09854b; }
+        </style>
+      </defs>
+      <path class="p6-blue2" d="M105.29,80.17c-3,4.61-8.95,9.06-13.36,12.4l-2.19.32c-.34.11-.43,1.2-.26,1.54l-5.56,4.24-2.62-.34c-7.57,8.21-15.88,9.33-16.39,14.55-10.55,1.79-23.5-1.73-32.58-8.18-5.34-.53-8.8-4.19-9.59-8.64-3.83-2.52-5.48-7.24-5.32-11.5,4.1-.39,9.23-1.22,12.06-.56l11.16,4.82-2.77,2.43c-.66.58-.16,2.26.73,3.85l1.93-5.55,16.33,9.66,3.41,2.76,3.87-1.57,2.98,1.91c.54.34,1.2-.89,1.43-1.73l4.88-17.97c3.91-8.2,9.73-14.33,16.08-20.67l19.39-9.34c1.46,11.06,1.83,19.2-3.61,27.57Z"/>
+      <path class="p6-pink" d="M53.39,94.71l-14.1-7.91-1.48-3.45c-.62-.94-3.34-1.02-4.56-1.01l-20.14.2c8.04,21.67,13.04,23.42,32.36,30.71-7.52,9.47-19.65,13.88-30.5,9.19C5.06,118.15-.24,111.96,0,101.27c.22-9.6,1.6-18.26,9.18-24.94,6.12-5.38,15.89-10.12,24.62-7.16,11.14,3.78,17.55,14.55,19.58,25.54Z"/>
+      <path class="p6-blue1" d="M101.35,14.5c.53,6.01.12,12.28-1.96,17.62v2.31s-4.79,5.35-4.79,5.35l-1.18.45-1.67.73c-.3.13-.34,1.29-.56,1.22-8.89,3.22-19.02,9.76-26.26,16.1-.73.69-1.32,3.26-1.37,4.16l-.78-.03-1.11,5.02.07,9.08c-1.56,8.5,2.58,16.47,6.79,24.08-.23.84-.89,2.07-1.43,1.73l-2.98-1.91-3.87,1.57-3.41-2.76-16.33-9.66-1.93,5.55c-.88-1.59-1.38-3.27-.73-3.85l2.77-2.43-11.16-4.82c-2.83-.65-7.96.17-12.06.56-.17,4.26,1.49,8.98,5.32,11.5.79,4.45,4.25,8.11,9.59,8.64,9.08,6.45,22.03,9.97,32.58,8.18.51-5.22,8.82-6.34,16.39-14.55l.35,2.34-10.04,8.68c-1.68,1.46-3.06,2.93-3.46,4.76-.71,3.25-.71,6.91-.2,10.42.34-1.68.64-3.35.63-4.27l3.69,17.13c.35,1.74-4.23,4.59-4.56,3.3l-.99-3.82c-1.7-6.6-3.93-13.9-3.18-21.46-6.2-.76-12.95-.22-18.07-2.16-19.32-7.29-24.32-9.04-32.36-30.71l20.14-.2,6.04,4.46,14.1,7.91,7.83,4.21-1.18-5.05c-.36-19.51-25.85-18.87-42-52.4-2.91-6.04-3.11-13.71-4.95-21.57l11.31,4.72c3.24,1.35,6.32,3.29,8,5.93l-8.76-4.64c-2.27-1.2-6.66-1.83-8.27-1.38l2.68,14.48,6.51,11.39,20,20.05,1.46,1.42c.33.32,2.35-.14,2.2-.57l-.95-2.84-1.59-7.83c2.01,4.6,6.61,11.34,10.71,16.2.83-5.22.2-9.4-.6-13.63-.38-2.03-1.04-3.88-1.65-5.26-.67-1.56-2.28-4.84-2.29-6.66l-.11-24.89c6.26,3.08,7.15,9.27,8.3,15.45l1.31,1.44c.39.42,1.58,1.95,1.72,1.4,1.4-5.34,8.97-12.74,13.79-15.52,3.98-2.3,7.19-3.36,9.07-6.54l1.65-.15c4.28-2.06,9.04-4.57,12.13-8.1l1.64.16ZM51.65,73.35c0-.61-.5-1.11-1.11-1.11s-1.11.5-1.11,1.11.5,1.11,1.11,1.11,1.11-.5,1.11-1.11Z"/>
+    </svg>
+  </div>
+  <!-- Small leaf, bottom-left -->
+  <div style="position:absolute;bottom:-3%;left:2%;width:clamp(60px,8vw,110px);opacity:0.2;pointer-events:none;z-index:1;" aria-hidden="true">
+    <svg viewBox="0 0 127.97 133.68" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          .p7-yellow { fill: #f7cb1f; }
+          .p7-yellow2 { fill: #dece37; }
+          .p7-yellow3 { fill: #f1ad18; }
+          .p7-pink { fill: #f791b0; }
+          .p7-coral { fill: #f56731; }
+          .p7-coral2 { fill: #f4352e; }
+          .p7-coral3 { fill: #ec6946; }
+        </style>
+      </defs>
+      <g>
+        <path class="p7-yellow" d="M19.75,20.28l2.71,3.91c1.6,2.31,3.31,4.41,5.38,5.68,3.9,7.4,10.89,14.26,9.71,24.25l-3.59,30.36c-.11.9.14,2.66.34,3.36s2.83-.24,2.96-.95l.49-2.7c.27-1.48,2.21-3.26,3.87-4.42l13-9.15c13.76-9.68,28.45-21.07,47.37-22.62.19,6.69-1.99,13.05-5.87,17.95l-4.77,3.55c-1.84,1.71-3.46,3.97-3.59,6.4-7.92,7.15-17.68,12.19-27.88,15.79l-4.5,1.59c-3.39,1.2-9.5,2.54-12.87,2.96-1.05.13-3.01-1.37-4.35-2.48l-.35,8.19.72,13.95c.07,1.44-4.35,2.46-4.7,1.16l-2.43-9.02c.69-2.87.55-6.69-1.23-8.19-.2-3.06.05-7.22-2.14-8.15l-10.8-15.39C6.69,67.27,1.92,54.67,6.08,40.86L1.56,7.14l.54-3.7c6.45,4.71,13.02,10.17,17.65,16.84Z"/>
+      </g>
+    </svg>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-12" style="position:relative;z-index:1;">
+
+    <div class="mb-10 reveal">
+      <p class="eyebrow mb-4" style="color:#1e5c30;">What Cozmo offers</p>
+      <h2 id="services-h2" class="font-display font-light mb-4"
+          style="font-size:clamp(3rem,7vw,5.5rem);line-height:1.05;color:#1a1a18;">
+        Deep, effective work across<br class="hidden md:block"> a broad range of needs.
+      </h2>
+      <p class="font-body font-light max-w-md" style="font-size:0.95rem;line-height:1.75;color:rgba(26,26,24,0.68);">
+        Cozmo offers focused, non-invasive energy work tailored to individuals, animals, and environments.
+      </p>
+    </div>
+
+    <div role="tablist" aria-label="Services" class="tab-list mb-8 reveal d1">
+      <button role="tab" class="tab-btn" aria-selected="true"  aria-controls="panel-1" id="tab-1">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"/></svg>
+        Energy Clearing
+      </button>
+      <button role="tab" class="tab-btn" aria-selected="false" aria-controls="panel-2" id="tab-2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Illness &amp; Treatment
+      </button>
+      <button role="tab" class="tab-btn" aria-selected="false" aria-controls="panel-3" id="tab-3">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c-4 0-8-2-8-7 0-3 2-5 5-6 1-.3 2-.5 3-.5s2 .2 3 .5c3 1 5 3 5 6 0 5-4 7-8 7z"/><path d="M8 10c0-1.7 1.3-3 3-3"/><circle cx="17" cy="5" r="2"/><circle cx="7" cy="6" r="1.5"/></svg>
+        Animals &amp; Properties
+      </button>
+      <button role="tab" class="tab-btn" aria-selected="false" aria-controls="panel-4" id="tab-4">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        IQM Teaching
+      </button>
+    </div>
+
+    <div class="reveal d2" style="position:relative;z-index:1;">
+
+      <div id="panel-1" role="tabpanel" aria-labelledby="tab-1" class="tab-panel tab-active">
+        <div style="border:none;border-radius:20px;padding:clamp(1.5rem,4vw,3rem);background:#f5f0e8;">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"/></svg></div>
+          <p class="eyebrow text-coral mb-3">Service 01</p>
+          <h3 class="font-display font-light text-ink mb-4" style="font-size:clamp(2rem,4vw,3rem);line-height:1.1;">Energy Clearing<br>and Healing</h3>
+          <p class="font-body font-light leading-relaxed mb-7" style="font-size:0.92rem;line-height:1.82;color:rgba(26,26,24,0.62);">Sessions are completely silent and non-invasive. You lie down, close your eyes, and rest. Cozmo works through a precise psychic connection — there is no need to explain yourself or talk through your history. She picks up what she needs.</p>
+          <div class="flex flex-wrap gap-2 mb-8"><span class="pill">trauma healing</span><span class="pill">anxiety support</span><span class="pill">emotional clearing</span><span class="pill">remote healing</span><span class="pill">in-person Dorset</span></div>
+          <a href="#contact" class="btn-coral" style="padding:0.7rem 1.4rem;font-size:0.65rem;">Book a session</a>
+        </div>
+        <div class="img-hold hidden lg:block" style="aspect-ratio:4/5;border-radius:20px;"></div>
+      </div>
+
+      <div id="panel-2" role="tabpanel" aria-labelledby="tab-2" class="tab-panel">
+        <div style="border:none;border-radius:20px;padding:clamp(1.5rem,4vw,3rem);background:#f5f0e8;">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <p class="eyebrow text-coral mb-3">Service 02</p>
+          <h3 class="font-display font-light text-ink mb-4" style="font-size:clamp(2rem,4vw,3rem);line-height:1.1;">Support Through<br>Illness &amp; Treatment</h3>
+          <p class="font-body font-light leading-relaxed mb-7" style="font-size:0.92rem;line-height:1.82;color:rgba(26,26,24,0.62);">Cozmo works alongside conventional medicine. If you or someone close to you is navigating surgery, chemotherapy, or recovery, her work can support how the body and mind respond.</p>
+          <div class="flex flex-wrap gap-2 mb-8"><span class="pill">surgery recovery support</span><span class="pill">chemotherapy support</span><span class="pill">holistic healing</span><span class="pill">complementary therapy</span></div>
+          <a href="#contact" class="btn-coral" style="padding:0.7rem 1.4rem;font-size:0.65rem;">Get in touch</a>
+        </div>
+        <div class="img-hold hidden lg:block" style="aspect-ratio:4/5;border-radius:20px;"></div>
+      </div>
+
+      <div id="panel-3" role="tabpanel" aria-labelledby="tab-3" class="tab-panel">
+        <div style="border:none;border-radius:20px;padding:clamp(1.5rem,4vw,3rem);background:#f5f0e8;">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c-4 0-8-2-8-7 0-3 2-5 5-6 1-.3 2-.5 3-.5s2 .2 3 .5c3 1 5 3 5 6 0 5-4 7-8 7z"/><path d="M8 10c0-1.7 1.3-3 3-3"/><circle cx="17" cy="5" r="2"/><circle cx="7" cy="6" r="1.5"/></svg></div>
+          <p class="eyebrow text-coral mb-3">Service 03</p>
+          <h3 class="font-display font-light text-ink mb-4" style="font-size:clamp(2rem,4vw,3rem);line-height:1.1;">Animals<br>and Properties</h3>
+          <p class="font-body font-light leading-relaxed mb-7" style="font-size:0.92rem;line-height:1.82;color:rgba(26,26,24,0.62);">Animals respond honestly — with no placebo or expectation — making the results especially clear. Cozmo also works with homes, properties, and businesses where energy feels stuck or heavy.</p>
+          <div class="flex flex-wrap gap-2 mb-8"><span class="pill">animal healing</span><span class="pill">horse healing</span><span class="pill">dog healing</span><span class="pill">house energy clearing</span><span class="pill">property energy cleansing</span></div>
+          <a href="#contact" class="btn-coral" style="padding:0.7rem 1.4rem;font-size:0.65rem;">Book a session</a>
+        </div>
+        <div class="img-hold hidden lg:block" style="aspect-ratio:4/5;border-radius:20px;"></div>
+      </div>
+
+      <div id="panel-4" role="tabpanel" aria-labelledby="tab-4" class="tab-panel">
+        <div style="border:none;border-radius:20px;padding:clamp(1.5rem,4vw,3rem);background:#f5f0e8;">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <p class="eyebrow text-coral mb-3">Service 04</p>
+          <h3 class="font-display font-light text-ink mb-4" style="font-size:clamp(2rem,4vw,3rem);line-height:1.1;">IQM Teaching —<br>Levels 1 and 2</h3>
+          <p class="font-body font-light leading-relaxed mb-7" style="font-size:0.92rem;line-height:1.82;color:rgba(26,26,24,0.62);">Cozmo teaches Integrative Quantum Medicine in small groups over three days. You leave with practical tools for managing energy, anxiety, and resilience.</p>
+          <div class="flex flex-wrap gap-2 mb-8"><span class="pill">IQM training</span><span class="pill">energy healing course</span><span class="pill">spiritual development</span><span class="pill">healing workshops UK</span></div>
+          <a href="#contact" class="btn-coral" style="padding:0.7rem 1.4rem;font-size:0.65rem;">Enquire about training</a>
+        </div>
+        <div class="img-hold hidden lg:block" style="aspect-ratio:4/5;border-radius:20px;"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+     HOW IT WORKS — cream
+════════════════════════════════════ -->
+<section id="how" class="py-24 lg:py-32 relative" style="background:#f5f0e8;" aria-labelledby="how-h2">
+
+  <!-- Large botanical, top-right -->
+  <div style="position:absolute;top:-4%;right:-3%;width:clamp(140px,18vw,260px);opacity:0.18;pointer-events:none;z-index:1;" aria-hidden="true">
+    <svg viewBox="0 0 145.56 133.04" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          .p8-coral { fill: #f06735; }
+          .p8-coral2 { fill: #f56731; }
+          .p8-pink { fill: #f791b0; }
+          .p8-coral3 { fill: #ec6946; }
+          .p8-green { fill: #0a9c36; }
+          .p8-green2 { fill: #09854b; }
+        </style>
+      </defs>
+      <path class="p8-coral" d="M90.3,4.67l3.99,1.08,1.02,1.23,3.23.89c12.55,5.38,25.34,14.15,33.6,24.65-.06,1.22-.17,3.98.82,4.12l3.29.42c9.02,14.24,11.38,30.46,7.54,48.14-2.08,9.58-11.17,16.14-19.05,22.14-8.27,6.29-15.5,13.02-24.26,17.74l-19.69,5.19c-10.02,1.33-20.74.94-30.65-.3l-9.19-1.14c-6.5-.81-14.38-4.12-19.75-8.7C5.37,106.61-.86,87.38.1,66.81.94,48.66,5.52,30.55,19.4,17.81,30.7,7.45,46.72.63,62.12.04c10.03-.38,19.39,2.26,28.18,4.63ZM67.36,11.8l-2.99.97c-12.35,1.63-23.58,6.47-33.03,15.19-6.18,4.66-12.87,9.47-16.1,16.83-7.87,17.9-6.51,45.38,5.28,56.27l5.65,5.21,14.85,10.54,6.27,5.22c1.6,1.33,3.91,4.66,6.02,5.95,3.85-11.62,19.46.54,31.33-8.9,4.48-3.57,11.15-5.84,16.38-8.45,3.49,1.25,5.97-.61,7.3-3.89l1.23.46c2.58-.97,6.55-3.01,6.62-5.41.48-.32,2.01-.56,2.68-.62l7.64-7.29c.81-.77,1.61-3.1,1.92-4.27,7.16-8.77,9.59-22.68,5.67-33.41l.05-2.61c0-.56-1.15-.91-1.77-1.21-.91-7.18-7.6-13.86-13.19-19.28-8.74-8.48-17.09-16.29-29.09-18.01-2.35-4.52-6-8.35-10.31-8.44-5.04-.11-10.68.96-12.39,5.13ZM96.69,10.99l-6.86-4.41c-.24,1.85-.33,4.95.89,5.69s4.95.74,6.45.5l2.7-.44c.37-.06.03-1.32-.34-1.33l-2.84-.02ZM60.4,127.88c0-.61-.5-1.11-1.11-1.11s-1.11.5-1.11,1.11.5,1.11,1.11,1.11,1.11-.5,1.11-1.11Z"/>
+      <path class="p8-coral3" d="M100.47,125.06c-19.03,10.24-39.05,9.63-59.52,3.75l9.19,1.14c9.91,1.23,20.63,1.63,30.65.3l19.69-5.19Z"/>
+    </svg>
+  </div>
+
+  <!-- Fern frond, bottom-left -->
+  <div style="position:absolute;bottom:-2%;left:1%;width:clamp(100px,12vw,170px);opacity:0.15;pointer-events:none;transform:rotate(-15deg);z-index:1;" aria-hidden="true">
+    <svg viewBox="0 0 140.15 140.93" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          .p9-pink { fill: #fcafc3; }
+          .p9-coral { fill: #f06735; }
+          .p9-coral2 { fill: #f56731; }
+          .p9-coral3 { fill: #ec6946; }
+        </style>
+      </defs>
+      <path class="p9-pink" d="M109.84,129.82c-10.22,6.62-20.01,9.97-32.15,9.85-24.62,5.16-51.59-5.77-64.55-27.89-4.02-6.85-4.67-15.08-7.78-22.49C-2.74,70.03-2.07,47.22,10.18,29.83,20.87,14.64,44.12-1.8,63.89.16c8.5.84,16.11,4.62,24.04,7.66,11.56,4.43,23.43,9.55,31.76,19.28,7.81,9.11,14.26,20.29,17.81,31.85,2.52,8.21,2.58,17.21,2.65,25.7.16,20.09-11.75,37.68-30.31,45.18ZM57.82,61.79l3.4,11.49-7.39-3.58-.51-.19c-6.9-6.23-21.55-12.69-29.87-8.05-2.39,1.33-3.64,7.34-1.78,9.12,4.11,3.91,7.8-.62,10.68-2.18,5.53-2.98,10.83,2.06,15.38,3.45l.86.02,3.59,4.36c4.17,5.21,7.3,10.41,13.85,12.5.05.25.18.76.12,1.02l-.99,4.74c-2.95-3.36-5.69-4.07-9.2-5.14-7.42-2.24-14.02-6.98-23.18-5.44-1.96.33-3.23,4.06-3.2,6.25.1,8.06,8.8,4.2,27.41,7.26,19.89,12.69,12.51,26.45,19.5,27.06,2.57.23,5.86-2.27,5.5-4.79l-.4-2.79c3.35-10.02,6.94-20.01,12.27-29.13l10.69-4.94c1.26-.58,2.67-3.1,2.17-4.34-.73-1.78-3.52-2.95-5.63-3.09-7.41-.49-10.68,5.48-13.65,10.79l-5.39,10.55-1.14,4.88c-.19.13-.88.76-.89,1.12l-.09,3.81c-7.78-7.44-3.37-21.73,4.34-32.45,8.55-11.88,19.34-19.22,33.76-22.41,1.64-.54.64-6.08-1-6.57-1.82-.54-6.05-1.78-7.83-.37l-22.87,18.22c-5.58,4.44-9.49,9.43-14.24,15.44-1.89-8.77-1.83-17.12.19-24.75l6.68-25.22c.36-1.35-.24-4.21-.76-5.35-.61-1.33-4.95-2.03-5.75-.78-7.42,11.73-3.24,27.9-11.68,32.19-5.87-12.31-3.52-28.06-7.61-28.9-1.46-.3-4.27-.22-5.29.56-1.19.92-1.35,4.85-.8,6.33l10.76,29.3Z"/>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 relative" style="z-index:1;">
+
+    <div class="mb-16 reveal">
+      <p class="eyebrow mb-4" style="color:rgba(245,240,232,0.5);">What to expect</p>
+      <h2 id="how-h2" class="font-display font-light"
+          style="font-size:clamp(3rem,7vw,5.5rem);line-height:1.05;color:#1a1a18;">
+        Straightforward<br>from the start.
+      </h2>
+    </div>
+
+    <ol class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8" role="list">
+
+      <!-- Step 01 -->
+      <li class="step-card reveal d1" style="background:#1e5c30;">
+        <!-- Botanical: single budding stem -->
+        <div style="margin-bottom:1.5rem;" aria-hidden="true">
+          <svg width="52" height="72" viewBox="0 0 52 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- stem -->
+            <path d="M26 70 C26 50 26 30 26 14" stroke="#f5f0e8" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- bud -->
+            <path d="M26 14 C20 10 16 4 20 0 C24 4 26 8 26 14Z" fill="#f5f0e8"/>
+            <path d="M26 14 C32 10 36 4 32 0 C28 4 26 8 26 14Z" fill="#f5f0e8"/>
+            <!-- small side leaves -->
+            <path d="M26 44 C18 40 12 30 16 20 C22 26 26 36 26 44Z" fill="#f5f0e8" opacity="0.75"/>
+            <path d="M26 44 C34 40 40 30 36 20 C30 26 26 36 26 44Z" fill="#f5f0e8" opacity="0.75"/>
+          </svg>
+        </div>
+        <p class="eyebrow mb-3" style="color:#f5f0e8;font-size:0.58rem;">Step 01</p>
+        <h3 class="font-display font-light mb-3" style="font-size:clamp(1.8rem,3vw,2.4rem);color:#f5f0e8;">Get in touch</h3>
+        <p class="font-body font-light" style="font-size:0.9rem;line-height:1.8;color:rgba(245,240,232,0.9);">Drop Cozmo an email. A short introductory call can be arranged if helpful.</p>
+      </li>
+
+      <!-- Step 02 -->
+      <li class="step-card reveal d2" style="background:#f4b429;">
+        <!-- Botanical: opening bloom -->
+        <div style="margin-bottom:1.5rem;" aria-hidden="true">
+          <svg width="52" height="72" viewBox="0 0 52 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- stem -->
+            <path d="M26 70 C26 50 26 36 26 28" stroke="#1a1a18" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- side leaf -->
+            <path d="M26 50 C14 44 8 32 12 20 C20 26 24 38 26 50Z" fill="#1a1a18" opacity="0.25"/>
+            <!-- petals -->
+            <path d="M26 28 C22 18 14 14 12 20 C16 24 22 26 26 28Z" fill="#1a1a18" opacity="0.35"/>
+            <path d="M26 28 C30 18 38 14 40 20 C36 24 30 26 26 28Z" fill="#1a1a18" opacity="0.35"/>
+            <path d="M26 28 C18 22 16 12 20 8 C24 12 26 20 26 28Z" fill="#1a1a18" opacity="0.3"/>
+            <path d="M26 28 C34 22 36 12 32 8 C28 12 26 20 26 28Z" fill="#1a1a18" opacity="0.3"/>
+            <!-- centre -->
+            <circle cx="26" cy="26" r="5" fill="#1a1a18" opacity="0.5"/>
+          </svg>
+        </div>
+        <p class="eyebrow mb-3" style="color:rgba(26,26,24,0.5);font-size:0.58rem;">Step 02</p>
+        <h3 class="font-display font-light text-ink mb-3" style="font-size:clamp(1.8rem,3vw,2.4rem);">Your session</h3>
+        <p class="font-body font-light" style="font-size:0.9rem;line-height:1.8;color:rgba(26,26,24,0.62);">Lie down, relax, and close your eyes. No talking or explanation is needed.</p>
+      </li>
+
+      <!-- Step 03 -->
+      <li class="step-card reveal d3" style="background:#e8593a;">
+        <!-- Botanical: full bloom -->
+        <div style="margin-bottom:1.5rem;" aria-hidden="true">
+          <svg width="52" height="72" viewBox="0 0 52 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- stem -->
+            <path d="M26 70 C26 50 26 38 26 30" stroke="#f5f0e8" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- side leaves -->
+            <path d="M26 52 C12 46 6 32 10 18 C18 24 22 38 26 52Z" fill="#f5f0e8" opacity="0.4"/>
+            <path d="M26 52 C40 46 46 32 42 18 C34 24 30 38 26 52Z" fill="#f5f0e8" opacity="0.4"/>
+            <!-- 6 petals radiating -->
+            <path d="M26 30 C20 20 10 18 8 24 C12 28 20 28 26 30Z" fill="#f5f0e8" opacity="0.7"/>
+            <path d="M26 30 C32 20 42 18 44 24 C40 28 32 28 26 30Z" fill="#f5f0e8" opacity="0.7"/>
+            <path d="M26 30 C18 22 14 12 18 6 C22 10 24 20 26 30Z" fill="#f5f0e8" opacity="0.65"/>
+            <path d="M26 30 C34 22 38 12 34 6 C30 10 28 20 26 30Z" fill="#f5f0e8" opacity="0.65"/>
+            <path d="M26 30 C22 18 24 8 28 4 C30 10 28 20 26 30Z" fill="#f5f0e8" opacity="0.8"/>
+            <!-- centre -->
+            <circle cx="26" cy="28" r="5.5" fill="#f5f0e8" opacity="0.9"/>
+            <circle cx="26" cy="28" r="2.5" fill="#e8593a"/>
+          </svg>
+        </div>
+        <p class="eyebrow mb-3" style="color:rgba(245,240,232,0.6);font-size:0.58rem;">Step 03</p>
+        <h3 class="font-display font-light mb-3" style="font-size:clamp(1.8rem,3vw,2.4rem);color:#f5f0e8;">Afterwards</h3>
+        <p class="font-body font-light" style="font-size:0.9rem;line-height:1.8;color:rgba(245,240,232,0.78);">Most people feel lighter. Cozmo shares insights and suggests next steps. No minimum commitment.</p>
+      </li>
+
+    </ol>
+
+    <div class="mt-12 reveal d4">
+      <a href="#contact" class="btn-cream">Free Introductory Call</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+     ABOUT — coral
+════════════════════════════════════ -->
+<section id="about" class="py-24 lg:py-32 relative" style="background:#f5f0e8;" aria-labelledby="about-h2">
+
+  <!-- Leaf cluster, bottom-right -->
+  <div style="position:absolute;bottom:-6%;right:-4%;width:clamp(120px,16vw,220px);opacity:0.2;pointer-events:none;z-index:1;" aria-hidden="true">
+    <svg viewBox="0 0 139.8 141.01" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          .p6b-coral { fill: #f06735; }
+          .p6b-pink { fill: #fcafc3; }
+          .p6b-blue1 { fill: #145fe8; }
+          .p6b-blue2 { fill: #0461f5; }
+          .p6b-coral2 { fill: #f56731; }
+          .p6b-coral3 { fill: #ec6946; }
+          .p6b-green { fill: #09854b; }
+        </style>
+      </defs>
+      <path class="p6b-blue2" d="M105.29,80.17c-3,4.61-8.95,9.06-13.36,12.4l-2.19.32c-.34.11-.43,1.2-.26,1.54l-5.56,4.24-2.62-.34c-7.57,8.21-15.88,9.33-16.39,14.55-10.55,1.79-23.5-1.73-32.58-8.18-5.34-.53-8.8-4.19-9.59-8.64-3.83-2.52-5.48-7.24-5.32-11.5,4.1-.39,9.23-1.22,12.06-.56l11.16,4.82-2.77,2.43c-.66.58-.16,2.26.73,3.85l1.93-5.55,16.33,9.66,3.41,2.76,3.87-1.57,2.98,1.91c.54.34,1.2-.89,1.43-1.73l4.88-17.97c3.91-8.2,9.73-14.33,16.08-20.67l19.39-9.34c1.46,11.06,1.83,19.2-3.61,27.57Z"/>
+      <path class="p6b-pink" d="M53.39,94.71l-14.1-7.91-1.48-3.45c-.62-.94-3.34-1.02-4.56-1.01l-20.14.2c8.04,21.67,13.04,23.42,32.36,30.71-7.52,9.47-19.65,13.88-30.5,9.19C5.06,118.15-.24,111.96,0,101.27c.22-9.6,1.6-18.26,9.18-24.94,6.12-5.38,15.89-10.12,24.62-7.16,11.14,3.78,17.55,14.55,19.58,25.54Z"/>
+      <path class="p6b-blue1" d="M101.35,14.5c.53,6.01.12,12.28-1.96,17.62v2.31s-4.79,5.35-4.79,5.35l-1.18.45-1.67.73c-.3.13-.34,1.29-.56,1.22-8.89,3.22-19.02,9.76-26.26,16.1-.73.69-1.32,3.26-1.37,4.16l-.78-.03-1.11,5.02.07,9.08c-1.56,8.5,2.58,16.47,6.79,24.08-.23.84-.89,2.07-1.43,1.73l-2.98-1.91-3.87,1.57-3.41-2.76-16.33-9.66-1.93,5.55c-.88-1.59-1.38-3.27-.73-3.85l2.77-2.43-11.16-4.82c-2.83-.65-7.96.17-12.06.56-.17,4.26,1.49,8.98,5.32,11.5.79,4.45,4.25,8.11,9.59,8.64,9.08,6.45,22.03,9.97,32.58,8.18.51-5.22,8.82-6.34,16.39-14.55l.35,2.34-10.04,8.68c-1.68,1.46-3.06,2.93-3.46,4.76-.71,3.25-.71,6.91-.2,10.42.34-1.68.64-3.35.63-4.27l3.69,17.13c.35,1.74-4.23,4.59-4.56,3.3l-.99-3.82c-1.7-6.6-3.93-13.9-3.18-21.46-6.2-.76-12.95-.22-18.07-2.16-19.32-7.29-24.32-9.04-32.36-30.71l20.14-.2,6.04,4.46,14.1,7.91,7.83,4.21-1.18-5.05c-.36-19.51-25.85-18.87-42-52.4-2.91-6.04-3.11-13.71-4.95-21.57l11.31,4.72c3.24,1.35,6.32,3.29,8,5.93l-8.76-4.64c-2.27-1.2-6.66-1.83-8.27-1.38l2.68,14.48,6.51,11.39,20,20.05,1.46,1.42c.33.32,2.35-.14,2.2-.57l-.95-2.84-1.59-7.83c2.01,4.6,6.61,11.34,10.71,16.2.83-5.22.2-9.4-.6-13.63-.38-2.03-1.04-3.88-1.65-5.26-.67-1.56-2.28-4.84-2.29-6.66l-.11-24.89c6.26,3.08,7.15,9.27,8.3,15.45l1.31,1.44c.39.42,1.58,1.95,1.72,1.4,1.4-5.34,8.97-12.74,13.79-15.52,3.98-2.3,7.19-3.36,9.07-6.54l1.65-.15c4.28-2.06,9.04-4.57,12.13-8.1l1.64.16ZM51.65,73.35c0-.61-.5-1.11-1.11-1.11s-1.11.5-1.11,1.11.5,1.11,1.11,1.11,1.11-.5,1.11-1.11Z"/>
+    </svg>
+  </div>
+
+  <!-- Fern sprig, top-left -->
+  <div style="position:absolute;top:6%;left:-2%;width:clamp(80px,10vw,140px);opacity:0.15;pointer-events:none;transform:rotate(-20deg);z-index:1;" aria-hidden="true">
+    <svg viewBox="0 0 127.97 133.68" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          .p7b-yellow { fill: #f7cb1f; }
+          .p7b-yellow2 { fill: #dece37; }
+          .p7b-yellow3 { fill: #f1ad18; }
+          .p7b-pink { fill: #f791b0; }
+          .p7b-coral { fill: #f56731; }
+          .p7b-coral2 { fill: #f4352e; }
+          .p7b-coral3 { fill: #ec6946; }
+        </style>
+      </defs>
+      <g>
+        <path class="p7b-yellow" d="M19.75,20.28l2.71,3.91c1.6,2.31,3.31,4.41,5.38,5.68,3.9,7.4,10.89,14.26,9.71,24.25l-3.59,30.36c-.11.9.14,2.66.34,3.36s2.83-.24,2.96-.95l.49-2.7c.27-1.48,2.21-3.26,3.87-4.42l13-9.15c13.76-9.68,28.45-21.07,47.37-22.62.19,6.69-1.99,13.05-5.87,17.95l-4.77,3.55c-1.84,1.71-3.46,3.97-3.59,6.4-7.92,7.15-17.68,12.19-27.88,15.79l-4.5,1.59c-3.39,1.2-9.5,2.54-12.87,2.96-1.05.13-3.01-1.37-4.35-2.48l-.35,8.19.72,13.95c.07,1.44-4.35,2.46-4.7,1.16l-2.43-9.02c.69-2.87.55-6.69-1.23-8.19-.2-3.06.05-7.22-2.14-8.15l-10.8-15.39C6.69,67.27,1.92,54.67,6.08,40.86L1.56,7.14l.54-3.7c6.45,4.71,13.02,10.17,17.65,16.84Z"/>
+        <path class="p7b-coral" d="M127.97,133.68H0V0h127.97v133.68ZM1,132.68h125.97V1H1v131.68Z"/>
+        <path class="p7b-coral2" d="M127.97,133.68H0V0h127.97v133.68ZM1,132.68h125.97V1H1v131.68Z"/>
+        <path class="p7b-coral3" d="M127.97,133.68H0V0h127.97v133.68ZM1,132.68h125.97V1H1v131.68Z"/>
+        <path class="p7b-pink" d="M127.97,133.68H0V0h127.97v133.68ZM1,132.68h125.97V1H1v131.68Z"/>
+        <path class="p7b-yellow2" d="M127.97,133.68H0V0h127.97v133.68ZM1,132.68h125.97V1H1v131.68Z"/>
+        <path class="p7b-yellow3" d="M127.97,133.68H0V0h127.97v133.68ZM1,132.68h125.97V1H1v131.68Z"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 relative" style="z-index:1;">
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-14 lg:gap-20 items-start">
+
+      <div class="reveal">
+        <p class="eyebrow mb-6" style="color:#1e5c30;">About Cozmo</p>
+        <h2 id="about-h2" class="font-display font-light mb-10"
+            style="font-size:clamp(3rem,7vw,5.5rem);line-height:1.05;color:#1a1a18;">
+          A quiet reputation<br>built on results.
+        </h2>
+        <blockquote class="border-l-4 pl-6 mb-10" style="border-color:rgba(26,26,24,0.1);">
+          <p class="font-display italic font-light"
+             style="font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.4;color:#1a1a18;">
+            "Cozmo has been practising for over 13&nbsp;years, building a reputation almost entirely through word of mouth."
+          </p>
+        </blockquote>
+        <p class="font-body font-light leading-relaxed mb-10"
+           style="font-size:0.95rem;line-height:1.82;color:rgba(26,26,24,0.68);">
+          She trained directly with Louise Mita, founder of Integrative Quantum Medicine, completing all three levels in eleven months — a process that typically takes five years. She became the first IQM teacher in Europe.
+        </p>
+        <div style="border-top:1px solid rgba(26,26,24,0.1);" class="pt-8">
+          <p class="eyebrow mb-5" style="color:rgba(26,26,24,0.4);">Credentials</p>
+          <ul class="space-y-3.5" role="list">
+            <li class="cred-item font-body font-light" style="font-size:0.9rem;color:rgba(26,26,24,0.68);">Trained by Louise Mita, founder of IQM</li>
+            <li class="cred-item font-body font-light" style="font-size:0.9rem;color:rgba(26,26,24,0.68);">First IQM teacher in Europe</li>
+            <li class="cred-item font-body font-light" style="font-size:0.9rem;color:rgba(26,26,24,0.68);">Certified Levels 1, 2 and 3</li>
+            <li class="cred-item font-body font-light" style="font-size:0.9rem;color:rgba(26,26,24,0.68);">Based in Dorset, UK — available worldwide</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal d2 hidden lg:block">
+        <div class="img-hold" style="width:100%;aspect-ratio:3/4;border-radius:0;"></div>
+        <!-- <img src="path/to/cozmo-about.jpg" alt="Cozmo Jenks"> -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+     TESTIMONIALS — cream
+════════════════════════════════════ -->
+<section id="testimonials" class="py-24 lg:py-32 relative" style="background:#f5f0e8;" aria-labelledby="testimonials-h2">
+
+  <!-- Botanical corner, bottom-right -->
+  <div style="position:absolute;bottom:-5%;right:-2%;width:clamp(110px,15vw,200px);opacity:0.18;pointer-events:none;z-index:1;" aria-hidden="true">
+    <svg viewBox="0 0 145.56 133.04" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          .p8b-coral { fill: #f06735; }
+          .p8b-coral2 { fill: #f56731; }
+          .p8b-pink { fill: #f791b0; }
+          .p8b-coral3 { fill: #ec6946; }
+          .p8b-green { fill: #0a9c36; }
+          .p8b-green2 { fill: #09854b; }
+        </style>
+      </defs>
+      <path class="p8b-coral" d="M90.3,4.67l3.99,1.08,1.02,1.23,3.23.89c12.55,5.38,25.34,14.15,33.6,24.65-.06,1.22-.17,3.98.82,4.12l3.29.42c9.02,14.24,11.38,30.46,7.54,48.14-2.08,9.58-11.17,16.14-19.05,22.14-8.27,6.29-15.5,13.02-24.26,17.74l-19.69,5.19c-10.02,1.33-20.74.94-30.65-.3l-9.19-1.14c-6.5-.81-14.38-4.12-19.75-8.7C5.37,106.61-.86,87.38.1,66.81.94,48.66,5.52,30.55,19.4,17.81,30.7,7.45,46.72.63,62.12.04c10.03-.38,19.39,2.26,28.18,4.63ZM67.36,11.8l-2.99.97c-12.35,1.63-23.58,6.47-33.03,15.19-6.18,4.66-12.87,9.47-16.1,16.83-7.87,17.9-6.51,45.38,5.28,56.27l5.65,5.21,14.85,10.54,6.27,5.22c1.6,1.33,3.91,4.66,6.02,5.95,3.85-11.62,19.46.54,31.33-8.9,4.48-3.57,11.15-5.84,16.38-8.45,3.49,1.25,5.97-.61,7.3-3.89l1.23.46c2.58-.97,6.55-3.01,6.62-5.41.48-.32,2.01-.56,2.68-.62l7.64-7.29c.81-.77,1.61-3.1,1.92-4.27,7.16-8.77,9.59-22.68,5.67-33.41l.05-2.61c0-.56-1.15-.91-1.77-1.21-.91-7.18-7.6-13.86-13.19-19.28-8.74-8.48-17.09-16.29-29.09-18.01-2.35-4.52-6-8.35-10.31-8.44-5.04-.11-10.68.96-12.39,5.13ZM96.69,10.99l-6.86-4.41c-.24,1.85-.33,4.95.89,5.69s4.95.74,6.45.5l2.7-.44c.37-.06.03-1.32-.34-1.33l-2.84-.02ZM60.4,127.88c0-.61-.5-1.11-1.11-1.11s-1.11.5-1.11,1.11.5,1.11,1.11,1.11,1.11-.5,1.11-1.11Z"/>
+      <path class="p8b-coral3" d="M100.47,125.06c-19.03,10.24-39.05,9.63-59.52,3.75l9.19,1.14c9.91,1.23,20.63,1.63,30.65.3l19.69-5.19Z"/>
+    </svg>
+  </div>
+
+  <!-- Small leaf accent, top-left -->
+  <div style="position:absolute;top:8%;left:2%;width:clamp(70px,9vw,120px);opacity:0.16;pointer-events:none;transform:rotate(25deg);z-index:1;" aria-hidden="true">
+    <svg viewBox="0 0 127.97 133.68" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          .p7c-yellow { fill: #f7cb1f; }
+          .p7c-yellow2 { fill: #dece37; }
+          .p7c-yellow3 { fill: #f1ad18; }
+          .p7c-pink { fill: #f791b0; }
+          .p7c-coral { fill: #f56731; }
+          .p7c-coral2 { fill: #f4352e; }
+          .p7c-coral3 { fill: #ec6946; }
+        </style>
+      </defs>
+      <g>
+        <path class="p7c-yellow" d="M19.75,20.28l2.71,3.91c1.6,2.31,3.31,4.41,5.38,5.68,3.9,7.4,10.89,14.26,9.71,24.25l-3.59,30.36c-.11.9.14,2.66.34,3.36s2.83-.24,2.96-.95l.49-2.7c.27-1.48,2.21-3.26,3.87-4.42l13-9.15c13.76-9.68,28.45-21.07,47.37-22.62.19,6.69-1.99,13.05-5.87,17.95l-4.77,3.55c-1.84,1.71-3.46,3.97-3.59,6.4-7.92,7.15-17.68,12.19-27.88,15.79l-4.5,1.59c-3.39,1.2-9.5,2.54-12.87,2.96-1.05.13-3.01-1.37-4.35-2.48l-.35,8.19.72,13.95c.07,1.44-4.35,2.46-4.7,1.16l-2.43-9.02c.69-2.87.55-6.69-1.23-8.19-.2-3.06.05-7.22-2.14-8.15l-10.8-15.39C6.69,67.27,1.92,54.67,6.08,40.86L1.56,7.14l.54-3.7c6.45,4.71,13.02,10.17,17.65,16.84Z"/>
+      </g>
+    </svg>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-12" style="position:relative;z-index:1;">
+
+    <div class="mb-12 reveal">
+      <p class="eyebrow text-coral mb-4">Kind words</p>
+      <h2 id="testimonials-h2" class="font-display font-light text-ink"
+          style="font-size:clamp(3rem,7vw,5.5rem);line-height:1.05;">
+        What people say.
+      </h2>
+    </div>
+
+    <div class="reveal d1" style="position:relative;" aria-live="polite" aria-atomic="true">
+
+      <div id="t-num" style="position:absolute;top:50%;left:-0.06em;transform:translateY(-50%);font-family:'Cormorant Garamond',serif;font-size:clamp(7rem,26vw,18rem);font-weight:600;line-height:1;color:rgba(26,26,24,0.04);pointer-events:none;user-select:none;z-index:0;" aria-hidden="true">01</div>
+
+      <div style="position:relative;z-index:1;display:flex;">
+
+        <div class="hidden lg:flex" style="flex-direction:column;align-items:center;padding-right:3rem;border-right:2px solid rgba(26,26,24,0.08);">
+          <span style="writing-mode:vertical-rl;font-family:'Syne',sans-serif;font-size:0.55rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(26,26,24,0.28);">Kind words</span>
+          <div style="position:relative;width:2px;height:5rem;background:rgba(26,26,24,0.08);margin-top:1.25rem;">
+            <div id="t-progress" style="position:absolute;top:0;left:0;width:100%;background:#e8593a;transition:height 0.55s cubic-bezier(0.22,1,0.36,1);"></div>
+          </div>
+        </div>
+
+        <div style="flex:1;padding-left:clamp(0rem,4vw,3rem);">
+
+          <div style="margin-bottom:2rem;">
+            <span id="t-badge" style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'Syne',sans-serif;font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;border:2px solid rgba(26,26,24,0.1);border-radius:100px;padding:0.28rem 0.9rem;color:rgba(26,26,24,0.48);">
+              <span style="width:6px;height:6px;border-radius:50%;background:#e8593a;flex-shrink:0;" aria-hidden="true"></span>
+              <span id="t-location"></span>
+            </span>
+          </div>
+
+          <div style="margin-bottom:2.5rem;">
+            <blockquote id="t-quote" itemscope itemtype="https://schema.org/Review">
+              <meta itemprop="reviewRating" content="5">
+              <p id="t-quote-text" class="font-display font-light text-ink"
+                 style="font-size:clamp(1.35rem,3.2vw,2.4rem);line-height:1.38;"></p>
+              <span hidden itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <span id="t-author-schema" itemprop="name"></span>
+              </span>
+            </blockquote>
+          </div>
+
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.25rem;">
+            <div style="display:flex;align-items:center;gap:1rem;">
+              <div id="t-author-line" style="width:2rem;height:2px;background:#e8593a;transform:scaleX(0);transform-origin:left;transition:transform 0.6s 0.4s cubic-bezier(0.22,1,0.36,1);" aria-hidden="true"></div>
+              <div>
+                <p id="t-author-name" class="font-syne" style="font-size:0.95rem;font-weight:700;color:#1a1a18;"></p>
+                <p id="t-author-loc"  class="font-body font-light" style="font-size:0.78rem;color:rgba(26,26,24,0.48);margin-top:0.1rem;"></p>
+              </div>
+            </div>
+            <div style="display:flex;gap:0.75rem;">
+              <button id="t-prev" class="t-nav-btn" aria-label="Previous testimonial">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button id="t-next" class="t-nav-btn" aria-label="Next testimonial">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+     CONTACT — amber
+════════════════════════════════════ -->
+<section id="contact" class="py-24 lg:py-32 relative overflow-hidden" style="background:#f4b429;" aria-labelledby="contact-h2">
+
+  <div style="position:absolute;top:-12%;right:-5%;width:clamp(200px,28vw,380px);aspect-ratio:1;border-radius:50%;background:rgba(26,26,24,0.06);pointer-events:none;" aria-hidden="true"></div>
+  <div style="position:absolute;bottom:10%;left:4%;opacity:0.32;pointer-events:none;" aria-hidden="true">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="#e8593a"><path d="M12 2L13.2 10.8L22 12L13.2 13.2L12 22L10.8 13.2L2 12L10.8 10.8Z"/></svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 relative" style="z-index:1;">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+
+      <div class="reveal">
+        <p class="eyebrow mb-6" style="color:rgba(26,26,24,0.5);">Let's talk</p>
+        <h2 id="contact-h2" class="font-display font-light text-ink mb-6"
+            style="font-size:clamp(3rem,7vw,5.5rem);line-height:1.05;">
+          Get in touch.
+        </h2>
+        <p class="font-body font-light leading-relaxed mb-10"
+           style="font-size:0.95rem;line-height:1.8;color:rgba(26,26,24,0.68);">
+          Whether you are ready to book or still exploring, Cozmo is happy to hear from you. Messages are usually answered within a day or two.
+        </p>
+        <div style="border:2px solid rgba(26,26,24,0.15);background:rgba(26,26,24,0.06);padding:1.25rem 1.5rem;border-radius:14px;">
+          <p class="eyebrow mb-1" style="font-size:0.57rem;color:rgba(26,26,24,0.46);">Offer</p>
+          <p class="font-display font-light text-ink" style="font-size:1.5rem;line-height:1.3;">Free introductory call available.</p>
+        </div>
+      </div>
+
+      <div class="reveal d2">
+        <form action="#" method="post" novalidate aria-label="Contact form">
+          <div class="space-y-5">
+            <div>
+              <label for="name" class="block font-syne mb-2" style="font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(26,26,24,0.52);">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required class="f-input" placeholder="Your name" aria-required="true">
+            </div>
+            <div>
+              <label for="email" class="block font-syne mb-2" style="font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(26,26,24,0.52);">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required class="f-input" placeholder="your@email.com" aria-required="true">
+            </div>
+            <div>
+              <label for="message" class="block font-syne mb-2" style="font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(26,26,24,0.52);">Message</label>
+              <textarea id="message" name="message" rows="5" required class="f-input resize-none" placeholder="Tell Cozmo a little about what brings you here…" aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="btn-ink w-full" style="padding-top:1.1rem;padding-bottom:1.1rem;">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ════════════════════════════════════
+     FOOTER — ink
+════════════════════════════════════ -->
+<footer style="background:#1a1a18;border-top:1px solid rgba(245,240,232,0.06);" class="py-10" role="contentinfo">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+    <p class="font-display font-light" style="font-size:1.15rem;color:#f5f0e8;">Cozmo Jenks</p>
+    <nav aria-label="Footer navigation">
+      <ul class="flex flex-wrap gap-6 justify-center" role="list">
+        <li><a href="#services"     class="nav-link" style="color:rgba(245,240,232,0.32);font-size:0.62rem;">Services</a></li>
+        <li><a href="#how"          class="nav-link" style="color:rgba(245,240,232,0.32);font-size:0.62rem;">How it works</a></li>
+        <li><a href="#about"        class="nav-link" style="color:rgba(245,240,232,0.32);font-size:0.62rem;">About</a></li>
+        <li><a href="#testimonials" class="nav-link" style="color:rgba(245,240,232,0.32);font-size:0.62rem;">Testimonials</a></li>
+        <li><a href="#contact"      class="nav-link" style="color:rgba(245,240,232,0.32);font-size:0.62rem;">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="font-body font-light" style="font-size:0.7rem;color:rgba(245,240,232,0.2);">© <span id="footer-yr"></span> Cozmo Jenks · Dorset, UK</p>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════ -->
+<script>
+  document.getElementById('footer-yr').textContent = new Date().getFullYear();
+
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobMenu   = document.getElementById('mob-menu');
+  const ham1 = document.getElementById('ham-1');
+  const ham2 = document.getElementById('ham-2');
+  const ham3 = document.getElementById('ham-3');
+  hamburger.addEventListener('click', () => {
+    const open = mobMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+    ham1.style.transform = open ? 'translateY(7px) rotate(45deg)' : '';
+    ham2.style.opacity   = open ? '0' : '';
+    ham3.style.transform = open ? 'translateY(-7px) rotate(-45deg)' : '';
+  });
+  mobMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      ham1.style.transform = ham3.style.transform = '';
+      ham2.style.opacity = '';
+    });
+  });
+
+  // Service tabs
+  (function () {
+    const triggers = [...document.querySelectorAll('[role="tab"]')];
+    const panels   = [...document.querySelectorAll('[role="tabpanel"]')];
+    function activate(i) {
+      triggers.forEach((t, j) => t.setAttribute('aria-selected', j === i));
+      panels.forEach((p, j) => p.classList.toggle('tab-active', j === i));
+    }
+    triggers.forEach((t, i) => {
+      t.addEventListener('click', () => activate(i));
+      t.addEventListener('keydown', e => {
+        const len = triggers.length;
+        if (e.key === 'ArrowRight') { e.preventDefault(); const n=(i+1)%len;     activate(n); triggers[n].focus(); }
+        if (e.key === 'ArrowLeft')  { e.preventDefault(); const n=(i-1+len)%len; activate(n); triggers[n].focus(); }
+        if (e.key === 'Home')       { e.preventDefault(); activate(0);           triggers[0].focus(); }
+        if (e.key === 'End')        { e.preventDefault(); activate(len-1);       triggers[len-1].focus(); }
+      });
+    });
+    activate(0);
+  })();
+
+  // Testimonials carousel
+  (function () {
+    const data = [
+      { quote: "Cozmo has an extraordinary gift for tuning into what people need and meeting them exactly where they are. Her work is thoughtful, compassionate, and deeply impactful in a way that is genuinely hard to put into words.", author: "Rebecca Dennis", location: "Personal healing sessions" },
+      { quote: "The animals show just how powerful Cozmo is — they cannot surrender to the placebo effect, and the difference in their behaviour and healing is remarkable. I have also learned Level 1 and 2 myself and use it every single day.", author: "Flora Hall", location: "Horse and dog owner · IQM Level 2 student" },
+      { quote: "Cozmo is a phenomenally wise healer. She is incredibly sensitive and helps me find my way back to my own power and self-respect. After a session I feel whole again, renewed with clear and focussed energy and a zest for life.", author: "Patti Worcester", location: "" },
+      { quote: "It's nothing like talk therapy, is done mostly in silence, and can easily and effectively be done remotely. Coz has had a positive and profound effect on my family's life — from clearing the house to helping our son overcome his years-long fear of reading. What Coz does is absolutely real, absolutely worth exploring, and total contemporary magic.", author: "Freddie Wimsett", location: "" }
+    ];
+    let idx = 0, timer;
+
+    const numEl      = document.getElementById('t-num');
+    const quoteText  = document.getElementById('t-quote-text');
+    const authorName = document.getElementById('t-author-name');
+    const authorLoc  = document.getElementById('t-author-loc');
+    const locBadge   = document.getElementById('t-location');
+    const badgeWrap  = document.getElementById('t-badge');
+    const authorSch  = document.getElementById('t-author-schema');
+    const progress   = document.getElementById('t-progress');
+    const authorLine = document.getElementById('t-author-line');
+
+    function show(i) {
+      const t = data[i];
+      numEl.textContent        = String(i + 1).padStart(2, '0');
+      locBadge.textContent     = t.location;
+      badgeWrap.style.display  = t.location ? 'inline-flex' : 'none';
+      authorName.textContent   = t.author;
+      authorLoc.textContent    = t.location;
+      authorSch.textContent    = t.author;
+      progress.style.height    = `${((i + 1) / data.length) * 100}%`;
+
+      authorLine.style.transition = 'none';
+      authorLine.style.transform  = 'scaleX(0)';
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        authorLine.style.transition = 'transform 0.6s 0.4s cubic-bezier(0.22,1,0.36,1)';
+        authorLine.style.transform  = 'scaleX(1)';
+      }));
+
+      quoteText.innerHTML = t.quote.split(' ').map((w, n) =>
+        `<span class="t-word" style="transition-delay:${(n * 0.038).toFixed(3)}s">${w}</span>`
+      ).join(' ');
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        quoteText.querySelectorAll('.t-word').forEach(w => w.classList.add('in'));
+      }));
+    }
+
+    function go(dir) {
+      idx = (idx + dir + data.length) % data.length;
+      show(idx);
+      clearInterval(timer);
+      timer = setInterval(() => go(1), 6500);
+    }
+
+    document.getElementById('t-prev').addEventListener('click', () => go(-1));
+    document.getElementById('t-next').addEventListener('click', () => go(1));
+    show(0);
+    timer = setInterval(() => go(1), 6500);
+  })();
+
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); observer.unobserve(e.target); } });
+  }, { threshold: 0.07, rootMargin: '0px 0px -32px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
